@@ -93,7 +93,9 @@
           $t('login.loginWithPhone')
         }}</a>
         <span v-show="mode !== 'qrCode'">|</span>
-        <a v-show="mode !== 'qrCode'" @click="changeMode('qrCode')"> 二维码登录 </a>
+        <a v-show="mode !== 'qrCode'" @click="changeMode('qrCode')">
+          {{ $t('login.loginWithQrCode') }}
+        </a>
       </div>
       <div v-show="mode !== 'qrCode'" class="notice">{{ $t('login.noticeElectron') }}</div>
     </div>
@@ -110,6 +112,7 @@ import { storeToRefs } from 'pinia'
 import { useRoute, useRouter } from 'vue-router'
 import { setCookies } from '../utils/auth'
 import _ from 'lodash'
+import { useI18n } from 'vue-i18n'
 
 const router = useRouter()
 const route = useRoute()
@@ -124,7 +127,8 @@ const password = ref('')
 const qrCodeSvg = ref('')
 const qrCodeKey = ref('')
 const qrCodeCheckInterval = ref<any>(null)
-const qrCodeInformation = ref('打开网易云音乐APP扫码登录')
+const { t } = useI18n()
+const qrCodeInformation = ref(t('login.qrCode.scanTip'))
 
 const dataStore = useDataStore()
 // const likedStore = useLikedStore()
@@ -139,14 +143,14 @@ const checkQrCodeLogin = () => {
     loginQrCodeCheck(qrCodeKey.value).then((result) => {
       if (result.code === 800) {
         getQrCodeKey()
-        qrCodeInformation.value = '二维码已失效，请重新获取'
+        qrCodeInformation.value = t('login.qrCode.expired')
       } else if (result.code === 802) {
-        qrCodeInformation.value = '扫描成功，请在手机上确认登录'
+        qrCodeInformation.value = t('login.qrCode.scanned')
       } else if (result.code === 801) {
-        qrCodeInformation.value = '打开网易云音乐APP扫码登录'
+        qrCodeInformation.value = t('login.qrCode.pending')
       } else if (result.code === 803) {
         clearInterval(qrCodeCheckInterval.value)
-        qrCodeInformation.value = '登录成功，请稍等...'
+        qrCodeInformation.value = t('login.qrCode.success')
         result.code = 200
         result.cookie = result.cookie.replaceAll(' HTTPOnly', '')
         handleLoginResponse(result)

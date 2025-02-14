@@ -6,7 +6,7 @@
       :placeholder="placeholder"
       @keydown.enter="handleEnterKey"
     ></textarea>
-    <button class="comment-button" @click="submitComment">发送</button>
+    <button class="comment-button" @click="submitComment">Gửi</button>
   </div>
 </template>
 

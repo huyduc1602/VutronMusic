@@ -23,7 +23,7 @@
           />
         </svg>
         <div class="content">
-          <h2 style="margin-bottom: 20px">本地歌曲</h2>
+          <h2 style="margin-bottom: 20px">Bài hát cục bộ</h2>
           <div
             style="
               display: grid;
@@ -33,20 +33,20 @@
             "
           >
             <div>
-              <div class="subtitle">全部歌曲</div>
-              <div class="text">{{ localTracks.length }}首</div>
+              <div class="subtitle">Số bài</div>
+              <div class="text">{{ localTracks.length }} bài</div>
             </div>
             <div>
-              <div class="subtitle">歌曲总时长</div>
+              <div class="subtitle">Thời gian</div>
               <div class="text">{{ formatedTime }}</div>
             </div>
             <div>
-              <div class="subtitle">离线歌单</div>
-              <div class="text">{{ playlists.length }}个</div>
+              <div class="subtitle">Danh sách ngoại tuyến</div>
+              <div class="text">{{ playlists.length }} cái</div>
             </div>
             <div>
-              <div class="subtitle">本地歌手</div>
-              <div class="text">{{ artists.length }}位</div>
+              <div class="subtitle">Nghệ sĩ</div>
+              <div class="text">{{ artists.length }} người</div>
             </div>
           </div>
         </div>
@@ -118,7 +118,10 @@
           </div>
         </div>
         <div v-if="currentTab !== 'localPlaylist'" class="search-box">
-          <SearchBox ref="localSearchBoxRef" :placeholder="`搜索${placeHolderMap(currentTab)}`" />
+          <SearchBox
+            ref="localSearchBoxRef"
+            :placeholder="`Tìm kiếm ${placeHolderMap(currentTab)}`"
+          />
         </div>
         <button
           v-show="currentTab === 'localPlaylist'"

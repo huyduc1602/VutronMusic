@@ -94,7 +94,9 @@
       "desc": "This feature reads ReplayGain metadata from local files; it does not calculate values."
     },
     "embeddedInformation": "Prioritize Embedded Track Info",
-    "positionTrack": "Locate Track"
+    "positionTrack": "Locate Track",
+    "sure": "Sure",
+    "choose": "Choose"
   },
   "artist": {
     "artist": "Artist",
@@ -179,6 +181,7 @@
     "repeat": "Repeat",
     "repeatTrack": "Repeat Track",
     "resetPlayer": "Reset Player State",
+    "sure": "Sure",
     "like": "Like",
     "getFMTimeout": "Failed to fetch Personal FM (timeout)",
     "getFMOverCount": "Too many retries for Personal FM; switch manually.",
@@ -236,6 +239,7 @@
     },
     "general": {
       "language": {
+        "vi": "Tiếng Việt",
         "text": "Language",
         "zhHans": "简体中文",
         "zhHant": "繁體中文",

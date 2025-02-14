@@ -1,25 +1,25 @@
 <template>
   <div v-if="show" class="comment-container" :style="containerStyle">
     <div class="comment-head">
-      <label>评论({{ commentInfo.totalCount }})</label>
+      <label>Bình luận({{ commentInfo.totalCount }})</label>
       <div class="btns">
         <button
           class="btn"
           :class="{ active: commentInfo.sortType === 1 }"
           @click="handleClickSortType(1)"
-          >推荐</button
+          >Gợi ý</button
         >
         <button
           class="btn"
           :class="{ active: commentInfo.sortType === 2 }"
           @click="handleClickSortType(2)"
-          >最热</button
+          >Nóng nhất</button
         >
         <button
           class="btn"
           :class="{ active: commentInfo.sortType === 3 }"
           @click="handleClickSortType(3)"
-          >最新</button
+          >Cập nhật</button
         >
       </div>
     </div>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="comment-btns">
                   <button v-if="isAccountLoggedIn && item.owner" @click="handleDeleteComment(item)"
-                    >删除</button
+                    >Xóa bỏ</button
                   >
                   <button @click="handleLikeComment(item)"
                     ><svg-icon :icon-class="item.liked ? 'liked' : 'like'" />{{
@@ -89,7 +89,7 @@
     <div class="write-comment">
       <WriteComment
         ref="commentSubmitRef"
-        placeholder="随乐而起，有感而发"
+        placeholder="Hãy theo đuổi âm nhạc của bạn"
         @keydown-enter="handleSubmitComment"
       />
     </div>
@@ -250,7 +250,7 @@ const handleDeleteComment = (comment: any) => {
     showToast(t('toast.needToLogin'))
     return
   }
-  if (confirm(`确定要删除评论'${comment.content}'吗？`)) {
+  if (confirm(`Bạn có chắc chắn muốn xóa bình luận'${comment.content}'không?`)) {
     const params = {
       t: 0,
       type: typeMap[props.type],

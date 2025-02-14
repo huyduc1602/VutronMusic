@@ -123,7 +123,7 @@
     </div>
     <div v-else-if="exploreTab === 'newAlbum'" class="playlists">
       <div v-if="albumType === '热门' && newAlbumInfo.topAlbum.weekData.length !== 0">
-        <div :style="{ margin: '20px 0', fontSize: '20px', fontWeight: 'bold' }">本周新碟</div>
+        <div :style="{ margin: '20px 0', fontSize: '20px', fontWeight: 'bold' }">Tuần này</div>
         <CoverRow
           v-if="show"
           :items="newAlbumInfo.topAlbum.weekData"
@@ -137,7 +137,7 @@
         />
       </div>
       <div>
-        <div :style="{ margin: '20px 0', fontSize: '20px', fontWeight: 'bold' }">本月新碟</div>
+        <div :style="{ margin: '20px 0', fontSize: '20px', fontWeight: 'bold' }">Tháng này</div>
         <CoverRow
           v-if="show"
           :items="
@@ -163,7 +163,7 @@
         :show-play-button="true"
         :show-position="true"
         :is-end="true"
-        :show-play-count="activeCategory !== '排行榜' && exploreTab !== 'artist' ? true : false"
+        :show-play-count="activeCategory !== 'Xếp hạng' && exploreTab !== 'artist' ? true : false"
         :item-height="exploreTab === 'artist' ? 224 : 270"
         :colunm-number="5"
         :load-more="loadMore"
@@ -209,8 +209,8 @@ const { general } = storeToRefs(settingStore)
 const { togglePlaylistCategory } = settingStore
 
 const playlistInfo = reactive({
-  activeCategory: '全部',
-  allBigCats: ['语种', '风格', '场景', '情感', '主题'],
+  activeCategory: 'Tất cả',
+  allBigCats: ['Ngôn ngữ', 'Phong cách', 'Cảnh', 'Cảm xúc', 'Chủ đề'],
   total: 0,
   more: true,
   lasttime: 0
@@ -225,24 +225,24 @@ const artistInfo = reactive({
   more: true
 })
 
-const activeCategory = ref('全部')
-const saveCategory = ref('全部')
+const activeCategory = ref('Tất cả')
+const saveCategory = ref('Tất cả')
 const showCatOptions = ref(false)
-const allBigCats = ref(['语种', '风格', '场景', '情感', '主题'])
-const artistBigCats = ref(['语种', '分类', '筛选'])
+const allBigCats = ref(['Ngôn ngữ', 'Phong cách', 'Cảnh', 'Cảm xúc', 'Chủ đề'])
+const artistBigCats = ref(['Ngôn ngữ', 'Phân loại', 'Lọc'])
 const playlists = ref<any[]>([])
 const tracks = ref<any[]>([])
 const show = ref(false)
 // const hasMore = ref(true)
 const showList = ref<any[]>([])
 const activeArtistCat = ref(artistCategories.filter((cat) => cat.enable))
-const newTrackBtn = ref(['全部', '华语', '欧美', '日本', '韩国'])
-const albumTypeBtn = ref(['热门', '全部'])
-const albumType = ref('热门')
+const newTrackBtn = ref(['Tất cả', 'Hoa ngữ', 'Âu Mỹ', 'Nhật Bản', 'Hàn Quốc'])
+const albumTypeBtn = ref(['Phổ biến', 'Tất cả'])
+const albumType = ref('Phổ biến')
 
 const subText = computed(() => {
-  if (activeCategory.value === '排行榜') return 'updateFrequency'
-  if (activeCategory.value === '推荐歌单') return 'copywriter'
+  if (activeCategory.value === 'Xếp hạng') return 'updateFrequency'
+  if (activeCategory.value === 'Danh sách phát được đề xuất') return 'copywriter'
   return 'none'
 })
 
@@ -299,17 +299,17 @@ const getHighQualityPlaylist = () => {
 }
 
 const loadMore = () => {
-  if (['推荐歌单', '排行榜'].includes(activeCategory.value) === false) {
+  if (['Danh sách phát được đề xuất', 'Xếp hạng'].includes(activeCategory.value) === false) {
     getPlaylist()
   }
 }
 
 const getTopLists = () => {
   toplistDetail().then((data) => {
-    showList.value.push(data.list.find((item) => item.name === '飙升榜')!)
-    showList.value.push(data.list.find((item) => item.name === '新歌榜')!)
-    showList.value.push(data.list.find((item) => item.name === '原创榜')!)
-    showList.value.push(data.list.find((item) => item.name === '热歌榜')!)
+    showList.value.push(data.list.find((item) => item.name === 'Danh sách tăng')!)
+    showList.value.push(data.list.find((item) => item.name === 'Bảng xếp hạng bài hát mới')!)
+    showList.value.push(data.list.find((item) => item.name === 'Danh sách gốc')!)
+    showList.value.push(data.list.find((item) => item.name === 'Bảng xếp hạng bài hát hot')!)
   })
   toplists().then((data) => {
     playlists.value = []
@@ -319,12 +319,12 @@ const getTopLists = () => {
 }
 
 const getNewTrack = () => {
-  const trackMap = {
-    全部: 0,
-    华语: 7,
-    欧美: 96,
-    日本: 8,
-    韩国: 16
+  const trackMap: { [key: string]: number } = {
+    'Tất cả': 0,
+    'Hoa ngữ': 7,
+    'Âu Mỹ': 96,
+    'Nhật Bản': 8,
+    'Hàn Quốc': 16
   }
   topSong(trackMap[activeCategory.value]).then((data) => {
     playlists.value = []
@@ -335,12 +335,12 @@ const getNewTrack = () => {
 }
 
 const getNewAlbum = () => {
-  const albumMap = {
-    全部: 'ALL',
-    华语: 'ZH',
-    欧美: 'EA',
-    日本: 'JP',
-    韩国: 'KR'
+  const albumMap: { [key: string]: string } = {
+    'Tất cả': 'ALL',
+    'Hoa ngữ': 'ZH',
+    'Âu Mỹ': 'EA',
+    'Nhật Bản': 'JP',
+    'Hàn Quốc': 'KR'
   }
   if (albumType.value === '热门') {
     if (!newAlbumInfo.topAlbum.hasMore) return
@@ -376,12 +376,12 @@ const getPlaylist = () => {
   } else if (exploreTab.value === 'chart') {
     return getTopLists()
   } else if (exploreTab.value === 'playlist') {
-    if (activeCategory.value === '推荐歌单') {
+    if (activeCategory.value === 'Danh sách phát được đề xuất') {
       return getRecommendPlayList(100, true).then((list) => {
         playlists.value = []
         updatePlaylist(list)
       })
-    } else if (activeCategory.value === '精品歌单') {
+    } else if (activeCategory.value === 'Danh sách phát tuyệt vời') {
       return getHighQualityPlaylist()
     } else {
       return topPlaylist({ cat: activeCategory.value, offset: playlists.value.length }).then(

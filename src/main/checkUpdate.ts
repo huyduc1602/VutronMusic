@@ -7,7 +7,7 @@ export const checkUpdate = (win: BrowserWindow) => {
 
   // autoUpdater.setFeedURL({
   //   provider: 'github',
-  //   owner: 'stark81',
+  //   owner: 'huyduc',
   //   repo: 'VutronMusic',
   // })
   autoUpdater

@@ -39,7 +39,7 @@
             {{ $t('common.play') }}
           </ButtonTwoTone>
           <ButtonTwoTone icon-class="floor-comment" @click="openComment">
-            {{ '评论' }}
+            {{ 'Bình luận' }}
           </ButtonTwoTone>
           <ButtonTwoTone
             :icon-class="dynamicDetail.isSub ? 'heart-solid' : 'heart'"

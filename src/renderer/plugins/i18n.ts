@@ -1,4 +1,5 @@
 import { createI18n } from 'vue-i18n'
+import vi from '../locales/vi.json'
 import en from '../locales/en.json'
 import zh from '../locales/zh-hans.json'
 import zht from '../locales/zh-hant.json'
@@ -14,6 +15,7 @@ export default createI18n({
   fallbackLocale: 'en',
   globalInjection: true,
   messages: {
+    vi,
     en,
     zh,
     zht

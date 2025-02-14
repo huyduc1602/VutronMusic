@@ -94,7 +94,9 @@
       "desc": "此功能只會讀取本地歌曲元資料裡的音量平衡資訊，無法掃描計算得到結果"
     },
     "embeddedInformation": "優先使用歌曲內嵌資訊",
-    "positionTrack": "定位歌曲"
+    "positionTrack": "定位歌曲",
+    "sure": "当然",
+    "choose": "选择"
   },
   "artist": {
     "artist": "藝人",
@@ -239,7 +241,8 @@
         "text": "語言",
         "zhHans": "简体中文",
         "zhHant": "繁體中文",
-        "en": "English"
+        "en": "English",
+        "vi": "Tiếng Việt"
       },
       "showTimeOrID": {
         "text": "歌曲清單資訊顯示選項",

@@ -34,7 +34,7 @@ const store = new Store<TypeElectronStore>({
     },
     settings: {
       innerFirst: false,
-      lang: 'zh',
+      lang: 'vi',
       enableTrayMenu: false,
       closeAppOption: 'ask',
       useCustomTitlebar: false,
@@ -43,43 +43,43 @@ const store = new Store<TypeElectronStore>({
       shortcuts: [
         {
           id: 'play',
-          name: '播放/暂停',
+          name: 'Phát/Tạm dừng',
           shortcut: 'CommandOrControl+P',
           globalShortcut: 'Alt+CommandOrControl+P'
         },
         {
           id: 'next',
-          name: '下一首',
+          name: 'Kế tiếp',
           shortcut: 'CommandOrControl+Right',
           globalShortcut: 'Alt+CommandOrControl+Right'
         },
         {
           id: 'previous',
-          name: '上一首',
+          name: 'Trước',
           shortcut: 'CommandOrControl+Left',
           globalShortcut: 'Alt+CommandOrControl+Left'
         },
         {
           id: 'increaseVolume',
-          name: '增加音量',
+          name: 'Tăng âm lượng',
           shortcut: 'CommandOrControl+Up',
           globalShortcut: 'Alt+CommandOrControl+Up'
         },
         {
           id: 'decreaseVolume',
-          name: '减少音量',
+          name: 'Giảm âm lượng',
           shortcut: 'CommandOrControl+Down',
           globalShortcut: 'Alt+CommandOrControl+Down'
         },
         {
           id: 'like',
-          name: '喜欢歌曲',
+          name: 'Giống như bài hát',
           shortcut: 'CommandOrControl+L',
           globalShortcut: 'Alt+CommandOrControl+L'
         },
         {
           id: 'minimize',
-          name: '隐藏/显示播放器',
+          name: 'Ẩn/Hiển thị Người chơi',
           shortcut: 'CommandOrControl+M',
           globalShortcut: 'Alt+CommandOrControl+M'
         }

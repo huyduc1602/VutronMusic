@@ -1,0 +1,434 @@
+{
+  "desc": {
+    "welcome-title": "Xin chào Wutron! Mọi thứ đã sẵn sàng.",
+    "welcome-desc": "Bạn có thể phát triển ứng dụng web đa nền tảng. Xem các thay đổi trong thời gian thực và xây dựng cho nhiều nền tảng chỉ với một lệnh. Nếu bạn mới bắt đầu, hãy tham khảo tài liệu bên dưới hoặc thử một số mã ví dụ.",
+    "second-desc": "Bạn đã chuyển sang màn hình thứ hai! Chưa có gì ở đây!",
+    "selected-file": "Tệp đã chọn: {filePath}."
+  },
+  "menu": {
+    "change-theme": "Đổi Giao Diện",
+    "change-language": "Đổi Ngôn Ngữ",
+    "increase-count": "Tăng Số +1",
+    "documentation": "Tài Liệu",
+    "github": "Mã Nguồn",
+    "open-file": "Mở Tệp Văn Bản"
+  },
+  "nav": {
+    "home": "Trang Chủ",
+    "search": "Tìm Kiếm",
+    "library": "Thư Viện",
+    "localMusic": "Nhạc Cục Bộ",
+    "settings": "Cài Đặt",
+    "github": "Kho Lưu Trữ GitHub",
+    "error": "Lỗi Không Xác Định",
+    "track": "Bài Hát",
+    "artist": "Nghệ Sĩ",
+    "album": "Album",
+    "playlist": "Danh Sách",
+    "user": "Người Dùng",
+    "lyric": "Lời Bài Hát",
+    "mv": "MV",
+    "chart": "Xếp Hạng",
+    "newTrack": "Bài Mới",
+    "newAlbum": "Album Mới"
+  },
+  "home": {
+    "recommendPlaylist": "Danh Sách Phát Đề Xuất",
+    "recommendArtist": "Nghệ Sĩ Đề Xuất",
+    "newAlbum": "Album Mới",
+    "charts": "Xếp Hạng",
+    "seeMore": "Xem Tất Cả"
+  },
+  "library": {
+    "userProfileMenu": {
+      "logout": "Đăng Xuất",
+      "settings": "Cài Đặt"
+    },
+    "playlist": {
+      "playlist": "Danh Sách Phát",
+      "addToPlaylist": "Thêm vào Danh Sách Phát",
+      "title": "Tên Danh Sách Phát",
+      "setPrivate": "Đặt là Danh Sách Phát Riêng Tư",
+      "newPlaylist": "Danh Sách Phát Mới",
+      "updatedAt": "Cập Nhật Lần Cuối",
+      "search": "Tìm Kiếm"
+    },
+    "likedSongs": "Bài Hát Đã Thích",
+    "albums": "Album",
+    "artists": "Nghệ Sĩ",
+    "mvs": "MV",
+    "cloudDisk": "Đám Mây",
+    "playHistory": {
+      "title": "Lịch Sử Phát",
+      "all": "Tất Cả",
+      "week": "Tuần Trước"
+    }
+  },
+  "playlist": {
+    "search": "Tìm kiếm danh sách phát",
+    "categories": {
+      "all": "Tất cả",
+      "recommended": "Danh sách đề xuất",
+      "quality": "Danh sách chất lượng",
+      "official": "Chính thức",
+      "languages": {
+        "title": "Ngôn ngữ",
+        "chinese": "Tiếng Hoa",
+        "western": "Âu Mỹ",
+        "japanese": "Tiếng Nhật",
+        "korean": "Tiếng Hàn",
+        "cantonese": "Tiếng Quảng"
+      },
+      "genres": {
+        "title": "Thể loại",
+        "pop": "Pop",
+        "rock": "Rock",
+        "folk": "Dân ca",
+        "electronic": "Electronic",
+        "dance": "Dance",
+        "rap": "Rap",
+        "easy_listening": "Nhạc nhẹ",
+        "jazz": "Jazz",
+        "country": "Country",
+        "rb_soul": "R&B/Soul",
+        "classical": "Cổ điển",
+        "folk_music": "Dân tộc",
+        "british": "British",
+        "metal": "Metal",
+        "punk": "Punk",
+        "blues": "Blues",
+        "reggae": "Reggae",
+        "world_music": "World Music",
+        "latin": "Latin",
+        "new_age": "New Age",
+        "ancient_style": "Cổ phong",
+        "post_rock": "Post-rock",
+        "bossa_nova": "Bossa Nova"
+      },
+      "scenes": {
+        "title": "Tình huống",
+        "morning": "Buổi sáng",
+        "night": "Đêm khuya",
+        "study": "Học tập",
+        "work": "Làm việc",
+        "lunch_break": "Nghỉ trưa",
+        "afternoon_tea": "Trà chiều",
+        "subway": "Tàu điện ngầm",
+        "driving": "Lái xe",
+        "sports": "Thể thao",
+        "travel": "Du lịch",
+        "walking": "Đi dạo",
+        "bar": "Quán bar"
+      },
+      "moods": {
+        "title": "Cảm xúc",
+        "nostalgic": "Hoài niệm",
+        "fresh": "Trong sáng",
+        "romantic": "Lãng mạn",
+        "sad": "Buồn",
+        "healing": "Chữa lành",
+        "relaxing": "Thư giãn",
+        "lonely": "Cô đơn",
+        "touching": "Xúc động",
+        "exciting": "Phấn khích",
+        "happy": "Vui vẻ",
+        "quiet": "Yên tĩnh",
+        "missing": "Nhớ nhung"
+      },
+      "themes": {
+        "title": "Chủ đề",
+        "variety": "Giải trí",
+        "soundtrack": "Nhạc phim",
+        "acg": "ACG",
+        "children": "Thiếu nhi",
+        "campus": "Học đường",
+        "gaming": "Game",
+        "70s": "Thế hệ 70",
+        "80s": "Thế hệ 80",
+        "90s": "Thế hệ 90",
+        "internet_songs": "Nhạc mạng",
+        "ktv": "KTV",
+        "classic": "Kinh điển",
+        "cover": "Cover",
+        "guitar": "Guitar",
+        "piano": "Piano",
+        "instrumental": "Nhạc cụ",
+        "charts": "Bảng xếp hạng",
+        "2000s": "Thế hệ 2000"
+      }
+    }
+  },
+  "contextMenu": {
+    "defaultSort": "Sắp Xếp Mặc Định",
+    "sortByName": "Sắp Xếp Theo Tên",
+    "descendSort": "Sắp Xếp Theo Ngày (Giảm Dần)",
+    "ascendSort": "Sắp Xếp Theo Ngày (Tăng Dần)",
+    "selectAll": "Chọn Tất Cả",
+    "batchOperation": "Thao Tác Hàng Loạt",
+    "reScan": "Quét Lại Bài Hát",
+    "showComment": "Xem Bình Luận",
+    "showLyric": "Hiện Lời Bài Hát",
+    "setConvolver": "Hiệu Ứng Âm Thanh",
+    "playBackSpeed": "Tốc Độ Phát",
+    "lyricOffset": "Điều Chỉnh Độ Trễ Lời",
+    "play": "Phát",
+    "addToQueue": "Thêm Vào Hàng Đợi",
+    "accurateMatch": "Khớp Chính Xác",
+    "addToLocalPlaylist": "Thêm Vào Danh Sách Phát Cục Bộ",
+    "removeTrackFromPlaylist": "Xóa Khỏi Danh Sách Phát",
+    "showInFolder": "Mở Trong Thư Mục",
+    "deletePlaylist": "Xóa Danh Sách Phát",
+    "finish": "Hoàn Tất",
+    "allPlaylists": "Tất Cả Danh Sách Phát",
+    "minePlaylists": "Danh Sách Phát Của Tôi",
+    "likedPlaylists": "Danh Sách Phát Đã Thích",
+    "openOnBrowser": "Mở Trong Trình Duyệt",
+    "copyURL": "Sao Chép URL",
+    "copyId": "Sao Chép ID",
+    "playMV": "Phát MV"
+  },
+  "login": {
+    "loginText": "Đăng nhập vào VutronMusic",
+    "countryCode": "Mã quốc gia",
+    "phone": "Số điện thoại",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "login": "Đăng nhập",
+    "loginWithEmail": "Đăng nhập bằng Email",
+    "loginWithPhone": "Đăng nhập bằng SĐT",
+    "loginWithQrCode": "Đăng nhập bằng mã QR",
+    "noticeElectron": "Vui lòng lưu ý: Đây là ứng dụng của bên thứ ba sử dụng API của NetEase Cloud Music",
+    "qrCode": {
+      "scanTip": "Mở ứng dụng NetEase Cloud Music để quét mã QR",
+      "expired": "Mã QR đã hết hạn, vui lòng làm mới",
+      "scanned": "Quét thành công, vui lòng xác nhận trên điện thoại",
+      "pending": "Vui lòng quét mã QR",
+      "success": "Đăng nhập thành công, vui lòng đợi..."
+    }
+  },
+  "player": {
+    "play": "Phát",
+    "pause": "Tạm Dừng",
+    "previous": "Trước",
+    "moveToFMTrash": "Không Thích",
+    "next": "Tiếp",
+    "volume": "Âm Lượng",
+    "mute": "Tắt Tiếng",
+    "shuffle": "Phát Ngẫu Nhiên",
+    "singleLoop": "Lặp Một Bài",
+    "sequence": "Phát Tuần Tự",
+    "playlist": "Danh Sách Phát",
+    "download": "Tải Xuống",
+    "addToPlaylist": "Thêm Vào Danh Sách",
+    "noAllowCauseLocal": "Bài hát cục bộ; không cho phép thao tác",
+    "osdLyrics": "Hiện Lời Trên Màn Hình",
+    "nextUp": "Tiếp Theo",
+    "repeat": "Lặp Lại",
+    "repeatTrack": "Lặp Lại Bài Hát",
+    "resetPlayer": "Đặt Lại Trạng Thái",
+    "sure": "Chắc Chắn",
+    "like": "Thích",
+    "getFMTimeout": "Không thể tải FM Cá Nhân (hết thời gian)",
+    "getFMOverCount": "Quá nhiều lần thử lại FM Cá Nhân; hãy chuyển thủ công",
+    "converlution": {
+      "title": "Hiệu Ứng Âm Vang",
+      "mainGain": "Âm Chính",
+      "sendGain": "Âm Phụ",
+      "bright_hall": "Phòng Sáng",
+      "cardiod_35_10_spread": "Lan Tỏa Cardioid",
+      "cinema_diningroom": "Rạp Chiếu Phim",
+      "dining_living_true_stereo": "Phòng Khách",
+      "feedback_spring": "Âm Phản Hồi",
+      "living_bedroom_leveled": "Phòng Ngủ",
+      "matrix_1": "Ma Trận 1",
+      "matrix_2": "Ma Trận 2",
+      "s2_r4_bd": "Nhà Thờ",
+      "s3_r1_bd": "Âm Thanh Nổi",
+      "spreader50_65ms": "Phòng Nhỏ",
+      "telephone": "Điện Thoại",
+      "tim_omni_35_10_magnetic": "Âm Từ Tính",
+      "main_gain": "Âm Chính",
+      "send_gain": "Âm Phụ"
+    },
+    "frequad": {
+      "title": "Cài Đặt Âm Sắc",
+      "reset": "Đặt Lại",
+      "classical": "Cổ Điển",
+      "dance": "Khiêu Vũ",
+      "electronic": "Điện Tử",
+      "pop": "Pop",
+      "rock": "Rock",
+      "slow": "Chậm",
+      "soft": "Nhẹ Nhàng",
+      "subwoofer": "Âm Trầm",
+      "vocal": "Giọng Hát"
+    }
+  },
+  "common": {
+    "songs": "bài hát",
+    "play": "Phát"
+  },
+  "settings": {
+    "nav": {
+      "general": "Chung",
+      "appearance": "Giao Diện",
+      "tray": "Khay Hệ Thống",
+      "extension": "Tiện Ích Lời Bài Hát",
+      "platformSetting": "Cài Đặt Nền Tảng",
+      "lyricSetting": "Cài Đặt Lời Bài Hát",
+      "lyric": "Lời Bài Hát Cửa Sổ Chính",
+      "osdLyric": "Lời Bài Hát Màn Hình",
+      "trayLyric": "Lời Bài Hát Khay",
+      "localMusic": "Nhạc Cục Bộ",
+      "shortcut": "Phím Tắt"
+    },
+    "general": {
+      "language": {
+        "vi": "Tiếng Việt",
+        "text": "Ngôn Ngữ",
+        "zhHans": "简体中文",
+        "zhHant": "繁體中文",
+        "en": "English"
+      },
+      "showTimeOrID": {
+        "text": "Tùy Chọn Hiển Thị Danh Sách Bài Hát",
+        "time": "Thời Lượng",
+        "ID": "ID Bài Hát"
+      },
+      "useCustomTitlebar": "Sử Dụng Thanh Tiêu Đề Tùy Chỉnh (Yêu Cầu Khởi Động Lại)",
+      "outputDevice": {
+        "text": "Thiết Bị Đầu Ra Âm Thanh",
+        "deviceID": "mặc định"
+      },
+      "closeAppOption": {
+        "text": "Hành Vi Khi Thoát",
+        "minimizeToTray": "Thu Nhỏ Vào Khay",
+        "exit": "Thoát Trực Tiếp",
+        "ask": "Hỏi"
+      },
+      "logout": "Đăng Xuất"
+    },
+    "theme": {
+      "auto": "Tự Động",
+      "light": "Sáng",
+      "dark": "Tối",
+      "accent": "Màu Nhấn",
+      "blue": "Xanh Dương",
+      "purple": "Tím",
+      "orange": "Cam",
+      "cyan": "Xanh Lam",
+      "Customize": "Tùy Chỉnh"
+    },
+    "tray": {
+      "showLyric": "Hiện Lời Bài Hát Khay",
+      "showControl": "Hiện Nút Điều Khiển",
+      "lyricScrollFrameRate": {
+        "text": "FPS Cuộn Lời",
+        "desc": "Giá trị cao hơn có thể gây nhấp nháy; điều chỉnh cẩn thận."
+      },
+      "lyricFrameWidth": "Độ Rộng Cuộn Lời (px)"
+    },
+    "extension": {
+      "status": "Trạng Thái Tiện Ích Lời Bài Hát",
+      "showLyric": {
+        "text": "Hiện Lời Bài Hát Khay",
+        "desc": "Yêu cầu dịch vụ tiện ích lời bài hát."
+      },
+      "showTray": "Hiện Biểu Tượng Khay"
+    },
+    "osdLyric": {
+      "showOsdLyric": "Hiện Lời Bài Hát Màn Hình",
+      "alwaysOnTop": "Luôn Hiện Trên Cùng",
+      "type": {
+        "text": "Chế Độ Lời Bài Hát Màn Hình",
+        "small": "Chế Độ Thu Nhỏ",
+        "normal": "Chế Độ Thường"
+      },
+      "mode": {
+        "text": "Chế Độ Hiển Thị Lời",
+        "desc": "Chỉ áp dụng cho Chế độ Thu nhỏ.",
+        "oneLine": "Một Dòng",
+        "twoLines": "Hai Dòng"
+      },
+      "isLock": "Khóa Lời Bài Hát Màn Hình",
+      "isWordByWord": "Bật Lời Từng Từ (nếu có)",
+      "translationMode": {
+        "text": "Hiển Thị Phiên Dịch/Phiên Âm Lời",
+        "none": "Không",
+        "tlyric": "Dịch",
+        "romalrc": "Phiên Âm"
+      },
+      "fontSize": "Cỡ Chữ (px)",
+      "staticTime": {
+        "text": "Thời Gian Chờ Di Chuột",
+        "desc": "Sau khi khóa, lời mờ dần sau thời gian này (ms). Không hỗ trợ trên Linux."
+      }
+    },
+    "shortcut": {
+      "enableGlobalShortcut": "Bật Phím Tắt Toàn Cục",
+      "function": "Chức Năng",
+      "shortcut": "Phím Tắt",
+      "globalShortcut": "Phím Tắt Toàn Cục",
+      "resetShortcut": "Khôi Phục Mặc Định",
+      "play": "Phát / Tạm Dừng",
+      "next": "Tiếp",
+      "previous": "Trước",
+      "increaseVolume": "Tăng Âm Lượng",
+      "decreaseVolume": "Giảm Âm Lượng",
+      "like": "Thích",
+      "minimize": "Hiện/Ẩn Trình Phát"
+    }
+  },
+  "general": {
+    "language": {
+      "vi": "Tiếng Việt",
+      "text": "Ngôn ngữ",
+      "zhHans": "简体中文",
+      "zhHant": "繁體中文",
+      "en": "English"
+    },
+    "showTimeOrID": {
+      "text": "Tùy Chọn Hiển Thị Danh Sách Bài Hát",
+      "time": "Thời Lượng",
+      "ID": "ID Bài Hát"
+    },
+    "useCustomTitlebar": "Sử Dụng Thanh Tiêu Đề Tùy Chỉnh (Yêu Cầu Khởi Động Lại)",
+    "outputDevice": {
+      "text": "Thiết Bị Đầu Ra Âm Thanh",
+      "deviceID": "mặc định"
+    },
+    "closeAppOption": {
+      "text": "Hành Vi Khi Thoát",
+      "minimizeToTray": "Thu Nhỏ Vào Khay Hệ Thống",
+      "exit": "Thoát Trực Tiếp",
+      "ask": "Hỏi"
+    },
+    "logout": "Đăng Xuất"
+  },
+  "localMusic": {
+    "latedAdd": "Thêm Gần Đây",
+    "songs": "Bài Hát Cục Bộ",
+    "playlist": {
+      "text": "Danh Sách Phát Ngoại Tuyến",
+      "addToPlaylist": "Thêm vào Danh Sách Phát Ngoại Tuyến",
+      "newPlaylist": "Danh Sách Phát Ngoại Tuyến Mới"
+    },
+    "albums": "Album",
+    "artists": "Nghệ Sĩ",
+    "placeholder": "Tìm Kiếm Bài Hát Cục Bộ",
+    "scrollToTop": "Cuộn Lên Đầu",
+    "localMusicFolderPath": "Đường Dẫn Thư Mục Nhạc Cục Bộ",
+    "clearLocalMusic": {
+      "text": "Xóa Thông Tin Nhạc Cục Bộ",
+      "desc": "Thao tác này chỉ xóa metadata nhạc cục bộ khỏi ứng dụng, không xóa tệp thực tế."
+    },
+    "replayGain": {
+      "text": "Chuẩn Hóa Âm Lượng",
+      "desc": "Tính năng này đọc metadata ReplayGain từ tệp cục bộ; không tính toán giá trị."
+    },
+    "embeddedInformation": "Ưu Tiên Thông Tin Nhúng Của Bài Hát",
+    "positionTrack": "Định Vị Bài Hát",
+    "sure": "Chắc Chắn",
+    "choose": "Chọn"
+  }
+}

@@ -137,13 +137,13 @@ const handleRoute = (path: string): void => {
 }
 
 const categoryMap = {
-  chart: '排行榜',
+  chart: 'Xếp hạng',
   artist: '歌手'
 }
 
 const toExplore = (Category: string) => {
   exploreTab.value = Category
-  const cat = ['chart', 'artist'].includes(Category) ? categoryMap[Category] : '全部'
+  const cat = ['chart', 'artist'].includes(Category) ? categoryMap[Category] : 'tất cả'
   router.push({ name: 'explore', query: { category: cat, tab: Category } })
 }
 

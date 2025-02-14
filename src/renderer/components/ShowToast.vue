@@ -18,7 +18,7 @@ const { toast } = storeToRefs(stateStore)
   bottom: 64px;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 14px;
+  font-size: 12px;
   color: var(--color-text);
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.08);

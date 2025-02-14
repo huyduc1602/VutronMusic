@@ -8,7 +8,7 @@
           <div class="extra-info">
             <span v-if="user.vipType !== 0" class="vip"
               ><img class="cvip" :src="imageUrl" loading="lazy" />
-              <span class="text">黑胶VIP</span>
+              <span class="text">Đĩa VIP</span>
             </span>
             <span v-else class="text">{{ user.signature }}</span>
           </div>
@@ -50,6 +50,7 @@
             </div>
             <div class="right">
               <select v-model="selectLanguage">
+                <option value="vi">{{ $t('settings.general.language.vi') }}</option>
                 <option value="zh">{{ $t('settings.general.language.zhHans') }}</option>
                 <option value="zht">{{ $t('settings.general.language.zhHant') }}</option>
                 <option value="en">{{ $t('settings.general.language.en') }}</option>
@@ -102,7 +103,7 @@
               <div class="title">{{ $t('player.resetPlayer') }}</div>
             </div>
             <div class="right">
-              <button @click="resetPlayer">确定</button>
+              <button @click="resetPlayer">{{ $t('player.sure') }}</button>
             </div>
           </div>
           <div v-if="isElectron && isLinux" class="item">
@@ -124,7 +125,7 @@
           <div class="version-info">
             <p class="author">
               MADE BY
-              <a href="https://github.com/stark81" target="_blank">stark81</a>
+              <a href="https://github.com/huyduc1602" target="_blank">Hoàng Huy Đức</a>
             </p>
             <p class="version">{{ appVersion }}</p>
           </div>
@@ -302,7 +303,7 @@
                   format="rgb"
                   show-alpha
                 />
-                <div class="text">背景色</div>
+                <div class="text">Màu nền</div>
               </div>
               <div class="color">
                 <pick-colors
@@ -313,7 +314,7 @@
                   format="rgb"
                   show-alpha
                 />
-                <div class="text">已播放颜色</div>
+                <div class="text">Màu sắc đã chơi</div>
               </div>
               <div class="color">
                 <pick-colors
@@ -324,7 +325,7 @@
                   format="rgb"
                   show-alpha
                 />
-                <div class="text">未播放颜色</div>
+                <div class="text">Màu chưa chơi</div>
               </div>
               <div class="color">
                 <pick-colors
@@ -335,7 +336,7 @@
                   format="rgb"
                   show-alpha
                 />
-                <div class="text">阴影颜色</div>
+                <div class="text">Màu bóng</div>
               </div>
             </div>
           </div>
@@ -488,7 +489,9 @@
               <div class="title">{{ $t('localMusic.localMusicFolderPath') }}: {{ scanDir }}</div>
             </div>
             <div class="right">
-              <button @click="chooseDir">{{ scanDir ? '更改' : '选择' }}</button>
+              <button @click="chooseDir">{{
+                scanDir ? $t('localMusic.sure') : $t('localMusic.choose')
+              }}</button>
             </div>
           </div>
           <div class="item">
@@ -497,7 +500,7 @@
               <div class="description">{{ $t('localMusic.clearLocalMusic.desc') }}</div>
             </div>
             <div class="right">
-              <button @click="deleteLocalMusic">确定</button>
+              <button @click="deleteLocalMusic">{{ $t('localMusic.sure') }}</button>
             </div>
           </div>
           <div class="item">

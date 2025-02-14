@@ -44,9 +44,9 @@ function exitAsk(event: IpcMainEvent, win: BrowserWindow) {
       title: 'Infomation',
       cancelId: 2,
       defaultId: 0,
-      message: '确定要关闭吗？',
-      buttons: ['最小化到托盘', '直接退出'],
-      checkboxLabel: '记住我的选择'
+      message: 'Bạn có chắc chắn muốn đóng không?',
+      buttons: ['Thu nhỏ vào khay', 'Lối thoát trực tiếp'],
+      checkboxLabel: 'Hãy nhớ sự lựa chọn của tôi'
     })
     .then((result) => {
       if (result.checkboxChecked && result.response !== 2) {

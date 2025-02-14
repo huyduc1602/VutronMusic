@@ -9,7 +9,7 @@
   >
     <template #default>
       <div class="new-playlist-button" @click="newPlaylist"
-        ><svg-icon icon-class="plus" />新建歌单</div
+        ><svg-icon icon-class="plus" />Tạo danh sách phát mới</div
       >
       <div
         v-for="playlist in ownPlaylists"

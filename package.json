@@ -1,17 +1,17 @@
 {
   "name": "VutronMusic",
   "version": "1.4.0",
-  "homepage": "https://github.com/stark81",
-  "author": "stark81 <qq2995734001@gmail.com>",
+  "homepage": "https://github.com/huyduc1602",
+  "author": "huyduc1602 <huyduc1602@gmail.com>",
   "license": "MIT",
   "main": "dist/main/index.js",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/stark81/VutronMusic.git"
+    "url": "https://github.com/huyduc1602/VutronMusic.git"
   },
   "bugs": {
-    "url": "https://github.com/stark81/VutronMusic/issues"
+    "url": "https://github.com/huyduc1602/VutronMusic/issues"
   },
   "scripts": {
     "dev": "vite",

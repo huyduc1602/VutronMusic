@@ -31,7 +31,7 @@ const props = defineProps({
   },
   placeholder: {
     type: String,
-    default: '搜索'
+    default: 'Tìm kiếm'
   },
   clearKeywords: {
     type: Boolean,

@@ -2,8 +2,8 @@ import request from '../utils/request'
 // import { mapTrackPlayableStatus } from '../utils/common'
 
 /**
- * 推荐歌单
- * 说明 : 调用此接口 , 可获取推荐歌单
+ * Danh sách phát được đề xuất
+ * 说明 : 调用此接口 , 可获取Danh sách phát được đề xuất
  * - limit: 取出数量 , 默认为 30 (不支持 offset)
  * - 调用例子 : /personalized?limit=1
  * @param {Object} params

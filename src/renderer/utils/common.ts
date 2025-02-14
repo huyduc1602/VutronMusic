@@ -65,578 +65,578 @@ export const splitAlbumTitle = (title: string) => {
 
 export const playlistCategories = [
   {
-    name: '全部',
+    name: 'Tất cả',
     enable: true,
     bigCat: 'static'
   },
   {
-    name: '推荐歌单',
+    name: 'Danh sách đề xuất',
     enable: true,
     bigCat: 'static'
   },
   {
-    name: '精品歌单',
+    name: 'Danh sách chất lượng',
     enable: true,
     bigCat: 'static'
   },
   {
-    name: '官方',
+    name: 'Chính thức',
     enable: true,
     bigCat: 'static'
   },
   {
-    name: '华语',
+    name: 'Tiếng Hoa',
     enable: false,
-    bigCat: '语种'
+    bigCat: 'Ngôn ngữ'
   },
   {
-    name: '欧美',
+    name: 'Âu Mỹ',
     enable: true,
-    bigCat: '语种'
+    bigCat: 'Ngôn ngữ'
   },
   {
-    name: '日语',
+    name: 'Tiếng Nhật',
     enable: false,
-    bigCat: '语种'
+    bigCat: 'Ngôn ngữ'
   },
   {
-    name: '韩语',
+    name: 'Tiếng Hàn',
     enable: false,
-    bigCat: '语种'
+    bigCat: 'Ngôn ngữ'
   },
   {
-    name: '粤语',
+    name: 'Tiếng Quảng',
     enable: false,
-    bigCat: '语种'
+    bigCat: 'Ngôn ngữ'
   },
   {
-    name: '流行',
+    name: 'Pop',
     enable: true,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '摇滚',
+    name: 'Rock',
     enable: true,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '民谣',
+    name: 'Dân ca',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '电子',
+    name: 'Electronic',
     enable: true,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '舞曲',
+    name: 'Dance',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '说唱',
+    name: 'Rap',
     enable: true,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '轻音乐',
+    name: 'Nhạc nhẹ',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '爵士',
+    name: 'Jazz',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '乡村',
+    name: 'Country',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
     name: 'R&B/Soul',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '古典',
+    name: 'Cổ điển',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '民族',
+    name: 'Dân tộc',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '英伦',
+    name: 'British',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '金属',
+    name: 'Metal',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '朋克',
+    name: 'Punk',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '蓝调',
+    name: 'Blues',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '雷鬼',
+    name: 'Reggae',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '世界音乐',
+    name: 'World Music',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '拉丁',
+    name: 'Latin',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
     name: 'New Age',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '古风',
+    name: 'Cổ phong',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '后摇',
+    name: 'Post-rock',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
     name: 'Bossa Nova',
     enable: false,
-    bigCat: '风格'
+    bigCat: 'Thể loại'
   },
   {
-    name: '清晨',
+    name: 'Buổi sáng',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '夜晚',
+    name: 'Đêm khuya',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '学习',
+    name: 'Học tập',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '工作',
+    name: 'Làm việc',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '午休',
+    name: 'Nghỉ trưa',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '下午茶',
+    name: 'Trà chiều',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '地铁',
+    name: 'Tàu điện ngầm',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '驾车',
+    name: 'Lái xe',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '运动',
+    name: 'Thể thao',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '旅行',
+    name: 'Du lịch',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '散步',
+    name: 'Đi dạo',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '酒吧',
+    name: 'Quán bar',
     enable: false,
-    bigCat: '场景'
+    bigCat: 'Tình huống'
   },
   {
-    name: '怀旧',
+    name: 'Hoài niệm',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '清新',
+    name: 'Trong sáng',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '浪漫',
+    name: 'Lãng mạn',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '伤感',
+    name: 'Buồn',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '治愈',
+    name: 'Chữa lành',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '放松',
+    name: 'Thư giãn',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '孤独',
+    name: 'Cô đơn',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '感动',
+    name: 'Xúc động',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '兴奋',
+    name: 'Phấn khích',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '快乐',
+    name: 'Vui vẻ',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '安静',
+    name: 'Yên tĩnh',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '思念',
+    name: 'Nhớ nhung',
     enable: false,
-    bigCat: '情感'
+    bigCat: 'Cảm xúc'
   },
   {
-    name: '综艺',
+    name: 'Giải trí',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '影视原声',
+    name: 'Nhạc phim',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
     name: 'ACG',
     enable: true,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '儿童',
+    name: 'Thiếu nhi',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '校园',
+    name: 'Học đường',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '游戏',
+    name: 'Game',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '70后',
+    name: 'Thế hệ 70',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '80后',
+    name: 'Thế hệ 80',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '90后',
+    name: 'Thế hệ 90',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '网络歌曲',
+    name: 'Nhạc mạng',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
     name: 'KTV',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '经典',
+    name: 'Kinh điển',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '翻唱',
+    name: 'Cover',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '吉他',
+    name: 'Guitar',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '钢琴',
+    name: 'Piano',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '器乐',
+    name: 'Nhạc cụ',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '榜单',
+    name: 'Xếp hạng',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   },
   {
-    name: '00后',
+    name: 'Thế hệ 2000',
     enable: false,
-    bigCat: '主题'
+    bigCat: 'Chủ đề'
   }
 ]
 
 export const artistCategories = [
   {
-    name: '全部',
+    name: 'Tất cả',
     code: -1,
     enable: true,
-    bigCat: '语种'
+    bigCat: 'Ngôn ngữ'
   },
   {
-    name: '华语',
+    name: 'Tiếng Hoa',
     code: 7,
     enable: false,
-    bigCat: '语种'
+    bigCat: 'Ngôn ngữ'
   },
   {
-    name: '欧美',
+    name: 'Âu Mỹ',
     code: 96,
     enable: false,
-    bigCat: '语种'
+    bigCat: 'Ngôn ngữ'
   },
   {
-    name: '日本',
+    name: 'Tiếng Nhật',
     code: 8,
     enable: false,
-    bigCat: '语种'
+    bigCat: 'Ngôn ngữ'
   },
   {
-    name: '韩国',
+    name: 'Tiếng Hàn',
     code: 16,
     enable: false,
-    bigCat: '语种'
+    bigCat: 'Ngôn ngữ'
   },
   {
-    name: '其他',
+    name: 'Khác',
     code: 0,
     enable: false,
-    bigCat: '语种'
+    bigCat: 'Ngôn ngữ'
   },
   {
-    name: '全部',
+    name: 'Tất cả',
     code: -1,
     enable: true,
-    bigCat: '分类'
+    bigCat: 'Phân loại'
   },
   {
-    name: '男歌手',
+    name: 'Ca sĩ nam',
     code: 1,
     enable: false,
-    bigCat: '分类'
+    bigCat: 'Phân loại'
   },
   {
-    name: '女歌手',
+    name: 'Ca sĩ nữ',
     code: 2,
     enable: false,
-    bigCat: '分类'
+    bigCat: 'Phân loại'
   },
   {
-    name: '乐队组合',
+    name: 'Nhóm nhạc',
     code: 3,
     enable: false,
-    bigCat: '分类'
+    bigCat: 'Phân loại'
   },
   {
-    name: '热门',
+    name: 'Phổ biến',
     code: -1,
     enable: true,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: '#',
     code: 0,
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'A',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'B',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'C',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'D',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'E',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'F',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'G',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'H',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'I',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'J',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'K',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'L',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'M',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'N',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'O',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'P',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'Q',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'R',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'S',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'T',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'U',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'V',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'W',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'X',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'Y',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   },
   {
     name: 'Z',
     enable: false,
-    bigCat: '筛选'
+    bigCat: 'Lọc'
   }
 ]

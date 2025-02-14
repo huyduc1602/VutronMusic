@@ -11,13 +11,15 @@
     <div class="index-row">
       <div class="title">
         {{ $t('home.recommendPlaylist') }}
-        <a @click="toExplore('playlist', '推荐歌单')">{{ $t('home.seeMore') }}</a>
-        <!-- <router-link to="/explore?category=推荐歌单">{{ $t('home.seeMore') }}</router-link> -->
+        <a @click="toExplore('playlist', 'Danh sách phát được đề xuất')">{{
+          $t('home.seeMore')
+        }}</a>
+        <!-- <router-link to="/explore?category=Danh sách phát được đề xuất">{{ $t('home.seeMore') }}</router-link> -->
       </div>
       <CoverRow :items="recommendPlaylist.items" type="playlist" sub-text="copywriter" />
     </div>
     <div class="index-row">
-      <div class="title"> For You </div>
+      <div class="title"> Dành cho bạn </div>
       <div class="for-you-row">
         <DailyTracksCard ref="DailyTracksCardRef" />
         <FMCard />
@@ -39,7 +41,7 @@
       <div class="title">
         {{ $t('home.charts') }}
         <a @click="toExplore('chart')">{{ $t('home.seeMore') }}</a>
-        <!-- <router-link :to="toExplore('排行榜')">{{ $t('home.seeMore') }}</router-link> -->
+        <!-- <router-link :to="toExplore('Xếp hạng')">{{ $t('home.seeMore') }}</router-link> -->
       </div>
       <CoverRow :items="topList.items" type="playlist" sub-text="updateFrequency" />
     </div>
@@ -84,7 +86,7 @@ const current = ref(0)
 const timer = ref<any>(null)
 const show = ref(false)
 
-// 推荐歌单
+// Danh sách phát được đề xuất
 const recommendPlaylist = ref<{ items: any[] }>({ items: [] })
 
 // 推荐歌手
@@ -102,9 +104,9 @@ const topList = ref<{ items: any[]; ids: number[] }>({
   ids: [19723756, 180106, 60198, 3812895, 60131]
 })
 
-const toExplore = (tab: string, Category = '全部') => {
+const toExplore = (tab: string, Category = 'tất cả') => {
   exploreTab.value = tab
-  router.push({ name: 'explore', query: { category: Category, tab, type: '全部' } })
+  router.push({ name: 'explore', query: { category: Category, tab, type: 'tất cả' } })
 }
 
 const bannerChange = () => {

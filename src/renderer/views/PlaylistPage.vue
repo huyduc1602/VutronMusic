@@ -47,7 +47,7 @@
             {{ $t('common.play') }}
           </ButtonTwoTone>
           <ButtonTwoTone v-if="!isLocal" icon-class="floor-comment" @click="openComment">
-            {{ '评论' }}
+            {{ 'Bình luận' }}
           </ButtonTwoTone>
           <ButtonTwoTone
             v-if="!isLocal && playlist?.creator?.userId !== user.userId"
@@ -85,7 +85,7 @@
           {{ $t('common.play') }}
         </ButtonTwoTone>
         <ButtonTwoTone color="grey" icon-class="floor-comment" @click="openComment">
-          {{ '评论' }}
+          {{ 'Bình luận' }}
         </ButtonTwoTone>
         <ButtonTwoTone
           v-if="playlist.creator.userId !== user.userId"
@@ -116,7 +116,7 @@
           >心动模式</ButtonTwoTone
         >
         <ButtonTwoTone color="grey" icon-class="floor-comment" @click="openComment">
-          {{ '评论' }}
+          {{ 'Bình luận' }}
         </ButtonTwoTone>
         <SearchBox ref="pSearchBoxRef" :placeholder="$t('playlist.search')" />
       </div>
