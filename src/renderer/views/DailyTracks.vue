@@ -1,8 +1,10 @@
 <template>
   <div v-show="show">
     <div class="special-playlist1">
-      <div class="title gradient"> 每日歌曲推荐 </div>
-      <div class="subtitle">根据你的音乐口味生成 · 每天6:00更新</div>
+      <div class="title gradient">Gợi ý nhạc hàng ngày</div>
+      <div class="subtitle"
+        >Được tạo dựa trên sở thích âm nhạc của bạn · Cập nhật lúc 6:00 mỗi ngày</div
+      >
     </div>
 
     <TrackList

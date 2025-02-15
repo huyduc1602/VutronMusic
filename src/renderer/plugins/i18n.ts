@@ -6,7 +6,7 @@ import zht from '../locales/zh-hant.json'
 // import { getCurrentLocale } from '../utils'
 
 const settings = JSON.parse(localStorage.getItem('settings') || '{}')
-const language = settings?.general?.language || 'zh'
+const language = settings?.general?.language || 'vi'
 
 // getCurrentLocale()
 export default createI18n({

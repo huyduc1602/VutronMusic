@@ -236,7 +236,7 @@ const show = ref(false)
 // const hasMore = ref(true)
 const showList = ref<any[]>([])
 const activeArtistCat = ref(artistCategories.filter((cat) => cat.enable))
-const newTrackBtn = ref(['Tất cả', 'Hoa ngữ', 'Âu Mỹ', 'Nhật Bản', 'Hàn Quốc'])
+const newTrackBtn = ref(['Tất cả', 'Việt Nam', 'Hoa ngữ', 'Âu Mỹ', 'Nhật Bản', 'Hàn Quốc'])
 const albumTypeBtn = ref(['Phổ biến', 'Tất cả'])
 const albumType = ref('Phổ biến')
 
@@ -321,6 +321,7 @@ const getTopLists = () => {
 const getNewTrack = () => {
   const trackMap: { [key: string]: number } = {
     'Tất cả': 0,
+    'Việt Nam': 10,
     'Hoa ngữ': 7,
     'Âu Mỹ': 96,
     'Nhật Bản': 8,
@@ -337,6 +338,7 @@ const getNewTrack = () => {
 const getNewAlbum = () => {
   const albumMap: { [key: string]: string } = {
     'Tất cả': 'ALL',
+    'Việt Nam': 'VNI',
     'Hoa ngữ': 'ZH',
     'Âu Mỹ': 'EA',
     'Nhật Bản': 'JP',

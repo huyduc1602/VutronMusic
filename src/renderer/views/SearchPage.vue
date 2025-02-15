@@ -2,7 +2,9 @@
   <div v-show="show" class="search-page">
     <div class="info">
       <span class="title">{{ keywords }}</span>
-      <span class="sub-title">找到 {{ result[`${searchTab}Count`] }} {{ tagMap[searchTab] }}</span>
+      <span class="sub-title"
+        >Xuất hiện {{ result[`${searchTab}Count`] }} {{ tagMap[searchTab] }}</span
+      >
     </div>
     <div v-if="searchTab === 'track'" class="container">
       <TrackList
@@ -52,12 +54,12 @@ const show = ref(false)
 const keywords = ref('')
 const hasMore = ref(true)
 const tagMap = {
-  track: '首歌曲',
-  album: '张专辑',
-  artist: '位歌手',
-  playlist: '个歌单',
-  user: '位用户',
-  lyric: '个歌词'
+  track: 'bài hát',
+  album: 'album',
+  artist: 'nghệ sĩ',
+  playlist: 'playlist',
+  user: 'người dùng',
+  lyric: 'lời bài hát'
 }
 const result = reactive<{ [key: string]: any }>({
   track: [],

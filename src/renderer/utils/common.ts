@@ -85,6 +85,11 @@ export const playlistCategories = [
     bigCat: 'static'
   },
   {
+    name: 'Tiếng Việt',
+    enable: false,
+    bigCat: 'Ngôn ngữ'
+  },
+  {
     name: 'Tiếng Hoa',
     enable: false,
     bigCat: 'Ngôn ngữ'
@@ -441,6 +446,12 @@ export const artistCategories = [
     name: 'Tất cả',
     code: -1,
     enable: true,
+    bigCat: 'Ngôn ngữ'
+  },
+  {
+    name: 'Tiếng Việt',
+    code: 10,
+    enable: false,
     bigCat: 'Ngôn ngữ'
   },
   {

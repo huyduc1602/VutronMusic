@@ -64,6 +64,26 @@
       "week": "Tuần Trước"
     }
   },
+  "artist": {
+    "artist": "Nghệ Sĩ",
+    "withAlbums": "Album",
+    "videos": "MV",
+    "follow": "Theo Dõi",
+    "following": "Đang Theo Dõi",
+    "latestRelease": "Phát Hành Mới Nhất",
+    "latestMV": "MV Mới Nhất",
+    "popularSongs": "Bài Hát Nổi Bật",
+    "showMore": "Xem Thêm",
+    "showLess": "Thu Gọn",
+    "albums": "Album",
+    "EPsSingles": "EP & Đĩa Đơn",
+    "similarArtists": "Nghệ Sĩ Tương Tự",
+    "artistDesc": "Giới Thiệu Nghệ Sĩ"
+  },
+  "album": {
+    "released": "Phát Hành",
+    "albumDesc": "Giới Thiệu Album"
+  },
   "playlist": {
     "search": "Tìm kiếm danh sách phát",
     "categories": {
@@ -448,7 +468,7 @@
       "desc": "Tính năng này đọc metadata ReplayGain từ tệp cục bộ; không tính toán giá trị."
     },
     "embeddedInformation": "Ưu Tiên Thông Tin Nhúng Của Bài Hát",
-    "positionTrack": "BH phát",
+    "positionTrack": "Định vị bài hát",
     "sure": "Có",
     "choose": "Chọn",
     "choose-again": "Chọn lại"
@@ -457,5 +477,19 @@
     "timeout": "Không thể kết nối đến máy chủ, vui lòng thử lại sau",
     "sessionExpired": "Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại",
     "serverError": "Lỗi kết nối máy chủ"
+  },
+  "explore": {
+    "allPlaylist": "Tất cả danh sách phát",
+    "recommendPlaylist": "Danh sách phát đề xuất",
+    "recommendArtist": "Nghệ sĩ",
+    "newAlbum": "Album mới",
+    "charts": "Bảng xếp hạng",
+    "seeMore": "Xem tất cả"
+  },
+  "next": {
+    "nowPlaying": "Đang phát",
+    "insertPlaying": "Thêm vào hàng đợi",
+    "nextPlaying": "Tiếp theo",
+    "historyPlaying": "Lịch sử phát"
   }
 }

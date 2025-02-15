@@ -966,6 +966,8 @@ const formatShortcut = (shortcut: string) => {
     .replace('Right', '→')
   if (language.value === 'zh') {
     shortcut = shortcut.replace('Space', '空格')
+  } else if (language.value === 'vi') {
+    shortcut = shortcut.replace('Space', 'Khoảng cách')
   }
   if (isMac) {
     return shortcut

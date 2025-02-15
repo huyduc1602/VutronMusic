@@ -19,10 +19,10 @@
           >{{ playlist?.name }}</div
         >
         <div v-if="isLocal" class="artist">
-          Danh sách phát ngoại tuyến {{ user.nickname ? `by ${user.nickname}` : `` }}
+          Danh sách phát ngoại tuyến {{ user.nickname ? `bởi ${user.nickname}` : `` }}
         </div>
         <div v-else class="artist">
-          歌单 by
+          Album của
           <span
             v-if="
               [5277771961, 5277965913, 5277969451, 5277778542, 5278068783].includes(playlist.id)
@@ -103,7 +103,7 @@
     </div>
 
     <div v-if="isLikedSongsPage" class="special-playlist">
-      <div class="title gradient-green">我喜欢的音乐</div>
+      <div class="title gradient-green">Âm nhạc tôi thích</div>
       <div class="buttons">
         <ButtonTwoTone class="play-button" icon-class="play" color="grey" @click="play">
           {{ $t('common.play') }}
@@ -113,7 +113,7 @@
           icon-class="play"
           color="grey"
           @click="playIntelligenceList"
-          >心动模式</ButtonTwoTone
+          >Mô hình trái tim</ButtonTwoTone
         >
         <ButtonTwoTone color="grey" icon-class="floor-comment" @click="openComment">
           {{ 'Bình luận' }}
@@ -140,7 +140,7 @@
       :close-fn="toggleFullDescription"
       :show-footer="false"
       :click-outside-hide="true"
-      title="歌单介绍"
+      title="Giới thiệu danh sách phát"
       style="white-space: pre-wrap"
       >{{ playlist.description }}</Modal
     >

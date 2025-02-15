@@ -50,7 +50,7 @@
         <div v-if="album && album.matched !== false && album.id && album.name"
           ><router-link :to="`/album/${album.id}`">{{ album.name }}</router-link></div
         >
-        <div v-else> {{ album.name || '未知专辑' }}</div>
+        <div v-else> {{ album.name || 'Album không xác định' }}</div>
       </div>
 
       <div v-if="showTrackTime" class="createTime">
@@ -84,7 +84,7 @@
       <div
         ><div v-for="(lyric, index) in lyrics" :key="index" class="lyric">{{ lyric }}</div></div
       >
-      <!-- <button>复制歌词</button> -->
+      <!-- <button>Sao chép lời bài hát</button> -->
     </div>
   </div>
 </template>
@@ -196,7 +196,7 @@ const artists = computed(() => {
   const useAr = ar || artists
   useAr.map((artist: any) => {
     if (artist && !artist.name) {
-      artist.name = '未知歌手'
+      artist.name = 'Ca sĩ vô danh'
     }
   })
   return useAr

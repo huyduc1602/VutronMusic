@@ -117,7 +117,7 @@ const parseyrc = (lyric: string) => {
   if (!lyric.length) return []
 
   const extractLrcRegex = /^(?<lyricTimestamps>(?:\[.+?\])+)(?!\[)(?<content>.+)$/gm
-  const extractTimestampRegex = /\((\d+),(\d+),/g // 修改后的正则表达式
+  const extractTimestampRegex = /\((\d+),(\d+),/g // Biểu thức chính quy được sửa đổi
   const timestampRegex = /\[(\d+),(\d+)\]/g
   const parsedLyrics: any[] = []
 
@@ -149,9 +149,9 @@ const parseyrc = (lyric: string) => {
     const startTime = lyricTimestamps.match(timestampRegex)
     const times = startTime
       ? startTime.flatMap((match) => {
-          const [, num1, num2] = match.match(/\[(\d+),(\d+)\]/) || []
-          return [Number(num1) / 1000, Number(num2) / 1000]
-        })
+        const [, num1, num2] = match.match(/\[(\d+),(\d+)\]/) || []
+        return [Number(num1) / 1000, Number(num2) / 1000]
+      })
       : []
     if (times.length === 0) break
 

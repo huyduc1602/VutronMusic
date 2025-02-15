@@ -17,12 +17,12 @@
         <div v-if="subtitle !== ''" class="subtitle">{{ subtitle }}</div>
         <div class="artist">
           <span v-if="album?.artist?.id !== 104700">
-            <span>{{ album?.type }} by </span
+            <span>{{ album?.type }} của </span
             ><router-link :to="`/artist/${album?.artist?.id}`">{{
               album?.artist?.name
             }}</router-link></span
           >
-          <span v-else>Compilation by Various Artists</span>
+          <span v-else>Biên soạn bởi nhiều nghệ sĩ</span>
         </div>
         <div class="date-and-count">
           <span v-if="album?.mark === 1056768" class="explicit-symbol"><ExplicitSymbol /></span>
@@ -99,7 +99,7 @@
 
     <div v-if="filteredMoreAlbums.length !== 0" class="more-by">
       <div class="section-title">
-        More by
+        Thêm bởi
         <router-link :to="`/artist/${album.artist.id}`">{{ album.artist.name }}</router-link>
       </div>
       <div>
@@ -196,7 +196,7 @@ const tracksByDisc = computed(() => {
 
 const filteredMoreAlbums = computed(() => {
   const mAlbums = moreAlbums.value.filter((a) => a.id !== album.value.id)
-  const realAlbums = mAlbums.filter((a) => a.type === '专辑')
+  const realAlbums = mAlbums.filter((a) => a.type === 'Album')
   const eps = mAlbums.filter((a) => a.type === 'EP' || (a.type === 'EP/Single' && a.size > 1))
   const restItems = mAlbums.filter(
     (a) =>

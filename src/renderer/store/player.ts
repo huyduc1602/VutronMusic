@@ -60,7 +60,7 @@ export const usePlayerStore = defineStore(
     const isLocalList = ref(false)
     const pic = ref<string>(
       currentTrack.value?.album?.picUrl ||
-        'https://p2.music.126.net/UeTuwE7pvjBpypWLudqukA==/3132508627578625.jpg'
+      'https://p2.music.126.net/UeTuwE7pvjBpypWLudqukA==/3132508627578625.jpg'
     )
     const playlistSource = ref<{
       type: string
@@ -212,12 +212,12 @@ export const usePlayerStore = defineStore(
         const nextLyric = lyrics.lyric[currentLyricIndex.value + 1]
         const diff = nextLyric?.time - lyric?.time || 10
         result = {
-          content: lyric?.content || currentTrack.value?.name || '听你想听的音乐',
+          content: lyric?.content || currentTrack.value?.name || 'Nghe nhạc bạn muốn nghe',
           time: diff
         }
       } else {
         result = {
-          content: currentTrack.value?.name || '听你想听的音乐',
+          content: currentTrack.value?.name || 'Nghe nhạc bạn muốn nghe',
           time: 10
         }
       }

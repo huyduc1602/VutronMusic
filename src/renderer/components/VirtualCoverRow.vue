@@ -111,12 +111,12 @@ const getSubText = (item: any) => {
       albumType = item.size === 1 ? 'Single' : 'EP'
     } else if (item.type === 'Single') {
       albumType = 'Single'
-    } else if (item.type === '专辑') {
+    } else if (item.type === 'Album') {
       albumType = 'Album'
     }
     return `${albumType} · ${new Date(item.publishTime).getFullYear()}`
   } else if (props.subText === 'creator') {
-    subText = `by ${item.creator.nickname}`
+    subText = `của ${item.creator.nickname}`
   }
   return subText
 }

@@ -31,37 +31,37 @@ const createMenuTemplate = (win: BrowserWindow) => {
   const lang = store.get('settings.lang') as string
   // 定义多语言文本映射
   const i18n = {
-    showMainPanel: { zh: '显示主面板', zht: '顯示主面板', en: 'Show Main Panel' },
-    openOSD: { zh: '开启歌词', zht: '開啟歌詞', en: 'Open Lyric' },
-    closeOSD: { zh: '关闭歌词', zht: '關閉歌詞', en: 'Close Lyric' },
-    lockOSD: { zh: '锁定歌词', zht: '鎖定歌詞', en: 'Lock Lyric' },
-    unlockOSD: { zh: '解锁歌词', zht: '解鎖歌詞', en: 'Unlock Lyric' },
-    play: { zh: '播放', zht: '播放', en: 'Play' },
-    pause: { zh: '暂停', zht: '暫停', en: 'Pause' },
-    prev: { zh: '上一首', zht: '上一首', en: 'Prev' },
-    next: { zh: '下一首', zht: '下一首', en: 'Next' },
-    repeatMenu: { zh: '循环播放', zht: '循環播放', en: 'Repeat Mode' },
-    repeatOff: { zh: '关闭循环', zht: '關閉循環', en: 'Repeat Off' },
-    repeatOn: { zh: '列表循环', zht: '列表循環', en: 'Repeat On' },
-    repeatOne: { zh: '单曲循环', zht: '單曲循環', en: 'Repeat One' },
-    shuffle: { zh: '随机播放', zht: '隨機播放', en: 'Shuffle' },
-    like: { zh: '加入喜欢', zht: '加入喜歡', en: 'Like' },
-    unlike: { zh: '取消喜欢', zht: '取消喜歡', en: 'Dislike' },
-    quit: { zh: '退出', zht: '退出', en: 'Quit' }
+    showMainPanel: { zh: '显示主面板', zht: '顯示主面板', en: 'Show Main Panel', vi: 'Hiển thị cửa sổ chính' },
+    openOSD: { zh: '开启歌词', zht: '開啟歌詞', en: 'Open Lyric', vi: 'Hiện lời bài hát' },
+    closeOSD: { zh: '关闭歌词', zht: '關閉歌詞', en: 'Close Lyric', vi: 'Ẩn lời bài hát' },
+    lockOSD: { zh: '锁定歌词', zht: '鎖定歌詞', en: 'Lock Lyric', vi: 'Khóa lời bài hát' },
+    unlockOSD: { zh: '解锁歌词', zht: '解鎖歌詞', en: 'Unlock Lyric', vi: 'Mở khóa lời bài hát' },
+    play: { zh: '播放', zht: '播放', en: 'Play', vi: 'Phát' },
+    pause: { zh: '暂停', zht: '暫停', en: 'Pause', vi: 'Tạm dừng' },
+    prev: { zh: '上一首', zht: '上一首', en: 'Prev', vi: 'Bài trước' },
+    next: { zh: '下一首', zht: '下一首', en: 'Next', vi: 'Bài sau' },
+    repeatMenu: { zh: '循环播放', zht: '循環播放', en: 'Repeat Mode', vi: 'Chế độ lặp lại' },
+    repeatOff: { zh: '关闭循环', zht: '關閉循環', en: 'Repeat Off', vi: 'Tắt lặp lại' },
+    repeatOn: { zh: '列表循环', zht: '列表循環', en: 'Repeat On', vi: 'Lặp lại danh sách' },
+    repeatOne: { zh: '单曲循环', zht: '單曲循環', en: 'Repeat One', vi: 'Lặp lại một bài' },
+    shuffle: { zh: '随机播放', zht: '隨機播放', en: 'Shuffle', vi: 'Phát ngẫu nhiên' },
+    like: { zh: '加入喜欢', zht: '加入喜歡', en: 'Like', vi: 'Yêu thích' },
+    unlike: { zh: '取消喜欢', zht: '取消喜歡', en: 'Dislike', vi: 'Bỏ yêu thích' },
+    quit: { zh: '退出', zht: '退出', en: 'Quit', vi: 'Thoát' }
   }
 
   // 获取对应语言的文本
   const t = (key: keyof typeof i18n) =>
-    i18n[key][lang === 'zh' ? 'zh' : lang === 'zht' ? 'zht' : 'en']
+    i18n[key][lang === 'vi' ? 'vi' : lang === 'zht' ? 'zht' : 'en']
 
   const template: MenuItemConstructorOptions[] = Constants.IS_LINUX
     ? [
-        {
-          label: t('showMainPanel'),
-          click: () => win.show()
-        },
-        { type: 'separator' }
-      ]
+      {
+        label: t('showMainPanel'),
+        click: () => win.show()
+      },
+      { type: 'separator' }
+    ]
     : []
 
   return template.concat([

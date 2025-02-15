@@ -58,6 +58,10 @@ export default class Utils {
     } else if (format === 'Human') {
       let hoursUnit, minitesUnit
       switch (locale.value) {
+        case 'vi':
+          hoursUnit = 'giờ'
+          minitesUnit = 'phút'
+          break
         case 'zh':
           hoursUnit = '小时'
           minitesUnit = '分钟'
@@ -96,7 +100,7 @@ export default class Utils {
       return album.size === 1 ? 'Single' : 'EP'
     } else if (type === 'Single') {
       return 'Single'
-    } else if (type === '专辑') {
+    } else if (type === 'Album') {
       return 'Album'
     } else {
       return type

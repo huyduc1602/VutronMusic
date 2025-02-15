@@ -235,7 +235,7 @@ const latestMV = computed(() => {
     publishTime: mv.publishTime
   }
 })
-const albums = computed(() => albumsData.value.filter((a) => a.type === '专辑'))
+const albums = computed(() => albumsData.value.filter((a) => a.type === 'Album'))
 const eps = computed(() =>
   albumsData.value.filter((a) => ['EP/Single', 'EP', 'Single'].includes(a.type))
 )
