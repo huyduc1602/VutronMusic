@@ -81,7 +81,7 @@ const lyricWithTranslation = computed(() => {
       const { time, content, contentArray } = l
       const contentForUse = contentArray?.length ? contentArray : [content]
       const lyricItem = { time, content, contents: [contentForUse] }
-      // 歌词翻译
+      // Dịch lời bài hát
       const sameTimeTLyric = lyrics.value.tlyric.find(({ time: tTime }) => tTime === time)
       if (sameTimeTLyric) {
         const { content: tLyricContent } = sameTimeTLyric
@@ -136,7 +136,10 @@ const setOffset = (offset: number) => {
         offset: currentTrack.value!.offset + offset
       })
       .then((isSussess: boolean) => {
-        if (!isSussess) showToast('歌词延迟信息未保存至数据库，下次启动程序后需要重置歌词延迟')
+        if (!isSussess)
+          showToast(
+            'Thông tin về độ trễ của lời bài hát không được lưu vào cơ sở dữ liệu. Bạn cần đặt lại độ trễ của lời bài hát sau khi khởi động chương trình vào lần tiếp theo.'
+          )
       })
   }
   if (offset === 0) {
@@ -145,7 +148,7 @@ const setOffset = (offset: number) => {
     currentTrack.value!.offset += offset
   }
   showToast(
-    `当前歌曲的歌词延迟为: ${currentTrack.value!.offset > 0 ? '延迟' : '提前'}${Math.abs(currentTrack.value!.offset)}s`
+    `Độ trễ lời bài hát của bài hát hiện tại là: ${currentTrack.value!.offset > 0 ? 'trì hoãn' : 'trước'}${Math.abs(currentTrack.value!.offset)}s`
   )
 }
 

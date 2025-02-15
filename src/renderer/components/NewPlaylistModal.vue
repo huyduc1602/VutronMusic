@@ -27,7 +27,7 @@
       </div>
     </template>
     <template #footer>
-      <button class="primary block" @click="createAPlaylist">创建</button>
+      <button class="primary block" @click="createAPlaylist">Tạo</button>
     </template>
   </BaseModal>
 </template>
