@@ -2,47 +2,47 @@
   <a href="https://github.com/stark81/VutronMusic" target="blank">
     <img src="buildAssets/icons/icon.png" alt="Logo" width="156" height="156">
   </a>
-  <h2  style="font-weight: 600">VutronMusic</h2>
-  <p>高颜值的第三方网易云播放器</p>
+  <h2 style="font-weight: 600">VutronMusic</h2>
+  <p>Trình phát nhạc NetEase thứ ba với giao diện đẹp</p>
 </div>
 
 [![LocalMusic][localMusic-screenShot]](https://github.com/stark81/VutronMusic)
 
-## 说明
+## Giới thiệu
 
-- 本项目为本人个人项目，仅用于个人学习研究，请勿用于商业用途。
-- 由于本人对better-sqlite3不是那么熟悉，现在即便是安装依赖文件后自动运行post-install，也会导致better-sqlite3没有被准确复制，从而使得安装依赖文件后的第一次运行/打包失败，此时只需再次运行项目，即可正常使用<b> (此时， dist-native目录下会出现better-sqlite3文件)</b>。
-- 本项目大部份界面和功能参考 [YesPlayMusic](https://github.com/qier222/YesPlayMusic)，侧边导航栏设计参考"方格音乐"，本地音乐top部分的信息统计参考 [NSMusicS](https://github.com/Super-Badmen-Viper/NSMusicS)。
-- 为了减少内存使用，本项目使用虚拟列表来显示绝大部分的列表内容，包括：歌曲列表(单列、固定高度)、评论列表(单列、不固定高度、数量会增减)、探索页面的歌单、歌手列表(多列、不固定高度、数量会增减)等，因此部分列表滚动时可能会发生跳动、闪烁等现象，这些问题还在研究和处理。
+- Đây là dự án cá nhân của tôi, chỉ dùng cho mục đích học tập và nghiên cứu, vui lòng không sử dụng cho mục đích thương mại.
+- Do tôi không quá quen thuộc với better-sqlite3, ngay cả khi các file dependency được cài đặt tự động chạy post-install, better-sqlite3 vẫn có thể không được sao chép chính xác, dẫn đến lần chạy/build đầu tiên sau khi cài đặt dependency bị lỗi. Trong trường hợp này, chỉ cần chạy lại dự án là có thể sử dụng bình thường <b>(lúc này, thư mục dist-native sẽ xuất hiện file better-sqlite3)</b>.
+- Phần lớn giao diện và tính năng của dự án này tham khảo từ [YesPlayMusic](https://github.com/qier222/YesPlayMusic), thiết kế thanh điều hướng bên tham khảo từ "FangGe Music", phần thống kê thông tin top trong mục nhạc local tham khảo từ [NSMusicS](https://github.com/Super-Badmen-Viper/NSMusicS).
+- Để giảm thiểu việc sử dụng bộ nhớ, dự án này sử dụng danh sách ảo để hiển thị hầu hết nội dung danh sách, bao gồm: danh sách bài hát (đơn cột, chiều cao cố định), danh sách bình luận (đơn cột, chiều cao không cố định, số lượng có thể tăng giảm), danh sách playlist và nghệ sĩ trong trang khám phá (nhiều cột, chiều cao không cố định, số lượng có thể tăng giảm), v.v. Do đó, một số danh sách có thể bị nhảy, nhấp nháy khi cuộn, những vấn đề này vẫn đang được nghiên cứu và xử lý.
 
-## 特点
+## Tính năng
 
-- ⚡️ 使用 Vue3 + ts + pinia + fastify + better-sqlite3 进行开发；
-- ⚡️ 支持本地歌曲、离线歌单功能，本地歌曲支持读取内嵌封面、内嵌歌词功能，支持线上信息匹配(使用的是匹配接口，非搜索接口)；
-- ⚡️ 支持Mac状态栏歌词、TouchBar歌词等；Linux下可通过[media-controls](https://github.com/stark81/media-controls)插件将歌词显示在TopBar里；
-- ⚡️ 支持云盘、歌曲评论等功能；
+- ⚡️ Phát triển bằng Vue3 + TypeScript + Pinia + Fastify + Better-sqlite3
+- ⚡️ Hỗ trợ nhạc local, playlist offline, đọc ảnh bìa và lời nhạc nhúng trong file nhạc local, hỗ trợ khớp thông tin trực tuyến (sử dụng API khớp, không phải API tìm kiếm)
+- ⚡️ Hỗ trợ lời bài hát trên thanh trạng thái Mac, lời bài hát trên TouchBar; Trên Linux có thể hiển thị lời bài hát trên TopBar thông qua plugin [media-controls](https://github.com/stark81/media-controls)
+- ⚡️ Hỗ trợ tính năng cloud drive, bình luận bài hát và nhiều tính năng khác
 
-## 配置开发环境
+## Cài đặt môi trường phát triển
 
-```
-# 安装依赖，建议使用node21 + python3.9,其他的python版本可能会导致依赖安装失败的问题；
+```bash
+# Cài đặt dependencies, khuyến nghị sử dụng node21 + python3.9, các phiên bản python khác có thể gây lỗi khi cài đặt dependencies
 yarn install
 
-# arm64的Mac用户
-  使用苹果M系列芯片的用户，在安装依赖前先把buildAssets/builder/config.js文件中的mac.target.arch的值改为['arm64']，然后重新安装依赖即可；
+# Đối với người dùng Mac arm64
+# Người dùng sử dụng chip Apple M series, trước khi cài đặt dependencies hãy thay đổi giá trị mac.target.arch trong file buildAssets/builder/config.js thành ['arm64'], sau đó cài đặt lại dependencies
 
-# 运行
-yarn run dev（开发）
-yarn run build（构建）
+# Chạy dự án
+yarn run dev    # Chế độ phát triển
+yarn run build  # Build dự án
 ```
 
-## 开源许可
+## Giấy phép mã nguồn mở
 
-本项目仅供个人学习研究使用，禁止用于商业及非法用途。
+Dự án này chỉ dành cho mục đích học tập và nghiên cứu cá nhân, nghiêm cấm sử dụng cho mục đích thương mại và bất hợp pháp.
 
-基于 [MIT license](https://opensource.org/licenses/MIT) 许可进行开源。
+Mã nguồn mở theo [Giấy phép MIT](https://opensource.org/licenses/MIT).
 
-## 截图
+## Ảnh chụp màn hình
 
 ![home-screenShot][home-screenShot] ![explore-screenShot][explore-screenShot] ![library-screenShot][library-screenShot] ![likepage-screenShot][likepage-screenShot] ![local-music-screenShot][local-music-screenShot] ![playlist-screenShot][playlist-screenShot] ![playpage-screenShot][playpage-screenShot] ![comment-screenShot][comment-screenShot] ![search-screenShot][search-screenShot] ![user-screenShot][user-screenShot] ![mv-screenShot][mv-screenShot] ![tray-lyric-screenShot][tray-lyric-screenShot] ![media-controls-screenShot][media-controls-screenShot]
 
