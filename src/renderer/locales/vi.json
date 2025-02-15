@@ -17,7 +17,7 @@
     "home": "Trang Chủ",
     "search": "Tìm Kiếm",
     "library": "Thư Viện",
-    "localMusic": "Nhạc Cục Bộ",
+    "localMusic": "Nhạc Trong Máy",
     "settings": "Cài Đặt",
     "github": "Kho Lưu Trữ GitHub",
     "error": "Lỗi Không Xác Định",
@@ -220,13 +220,14 @@
     "playlist": "Danh Sách Phát",
     "download": "Tải Xuống",
     "addToPlaylist": "Thêm Vào Danh Sách",
-    "noAllowCauseLocal": "Bài hát cục bộ; không cho phép thao tác",
+    "noAllowCauseLocal": "Nhạc trong máy; không cho phép thao tác",
     "osdLyrics": "Hiện Lời Trên Màn Hình",
     "nextUp": "Tiếp Theo",
     "repeat": "Lặp Lại",
     "repeatTrack": "Lặp Lại Bài Hát",
     "resetPlayer": "Đặt Lại Trạng Thái",
     "sure": "Chắc Chắn",
+    "yes": "Có",
     "like": "Thích",
     "getFMTimeout": "Không thể tải FM Cá Nhân (hết thời gian)",
     "getFMOverCount": "Quá nhiều lần thử lại FM Cá Nhân; hãy chuyển thủ công",
@@ -275,11 +276,11 @@
       "tray": "Khay Hệ Thống",
       "extension": "Tiện Ích Lời Bài Hát",
       "platformSetting": "Cài Đặt Nền Tảng",
-      "lyricSetting": "Cài Đặt Lời Bài Hát",
+      "lyricSetting": "Chỉnh Lời BH",
       "lyric": "Lời Bài Hát Cửa Sổ Chính",
       "osdLyric": "Lời Bài Hát Màn Hình",
       "trayLyric": "Lời Bài Hát Khay",
-      "localMusic": "Nhạc Cục Bộ",
+      "localMusic": "Nhạc Trong Máy",
       "shortcut": "Phím Tắt"
     },
     "general": {
@@ -407,7 +408,7 @@
   },
   "localMusic": {
     "latedAdd": "Thêm Gần Đây",
-    "songs": "Bài Hát Cục Bộ",
+    "songs": "Nhạc Trong Máy",
     "playlist": {
       "text": "Danh Sách Phát Ngoại Tuyến",
       "addToPlaylist": "Thêm vào Danh Sách Phát Ngoại Tuyến",
@@ -415,11 +416,11 @@
     },
     "albums": "Album",
     "artists": "Nghệ Sĩ",
-    "placeholder": "Tìm Kiếm Bài Hát Cục Bộ",
-    "scrollToTop": "Cuộn Lên Đầu",
-    "localMusicFolderPath": "Đường Dẫn Thư Mục Nhạc Cục Bộ",
+    "placeholder": "Tìm Kiếm Nhạc Trong Máy",
+    "scrollToTop": "Lên đầu",
+    "localMusicFolderPath": "Đường Dẫn Thư Mục Nhạc Trong Máy",
     "clearLocalMusic": {
-      "text": "Xóa Thông Tin Nhạc Cục Bộ",
+      "text": "Xóa Thông Tin Nhạc Trong Máy",
       "desc": "Thao tác này chỉ xóa metadata nhạc cục bộ khỏi ứng dụng, không xóa tệp thực tế."
     },
     "replayGain": {
@@ -427,8 +428,9 @@
       "desc": "Tính năng này đọc metadata ReplayGain từ tệp cục bộ; không tính toán giá trị."
     },
     "embeddedInformation": "Ưu Tiên Thông Tin Nhúng Của Bài Hát",
-    "positionTrack": "Định Vị Bài Hát",
-    "sure": "Chắc Chắn",
-    "choose": "Chọn"
+    "positionTrack": "BH phát",
+    "sure": "Có",
+    "choose": "Chọn",
+    "choose-again": "Chọn lại"
   }
 }

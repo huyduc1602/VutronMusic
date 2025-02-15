@@ -103,7 +103,7 @@
               <div class="title">{{ $t('player.resetPlayer') }}</div>
             </div>
             <div class="right">
-              <button @click="resetPlayer">{{ $t('player.sure') }}</button>
+              <button @click="resetPlayer">{{ $t('player.yes') }}</button>
             </div>
           </div>
           <div v-if="isElectron && isLinux" class="item">
@@ -490,7 +490,7 @@
             </div>
             <div class="right">
               <button @click="chooseDir">{{
-                scanDir ? $t('localMusic.sure') : $t('localMusic.choose')
+                scanDir ? $t('localMusic.choose-again') : $t('localMusic.choose')
               }}</button>
             </div>
           </div>

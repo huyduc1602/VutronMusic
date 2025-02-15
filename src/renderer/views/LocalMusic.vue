@@ -23,7 +23,7 @@
           />
         </svg>
         <div class="content">
-          <h2 style="margin-bottom: 20px">Bài hát cục bộ</h2>
+          <h2 style="margin-bottom: 20px">Nhạc trong máy</h2>
           <div
             style="
               display: grid;

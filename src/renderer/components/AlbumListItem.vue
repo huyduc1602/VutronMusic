@@ -8,7 +8,7 @@
         </div>
         <div class="artist">
           <ArtistsInLine :artists="artists" />
-          - 共 {{ tracks.length }} 首歌
+          - Tổng {{ tracks.length }} bài hát
         </div>
       </div>
     </div>

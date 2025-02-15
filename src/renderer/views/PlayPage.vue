@@ -49,7 +49,7 @@
                       <label
                         v-show="lyrics.tlyric.length"
                         :class="{ active: nTranslationMode === 'tlyric' }"
-                        >译</label
+                        >Dịch</label
                       >
                       <label v-if="lyrics.tlyric.length && lyrics.rlyric.length" class="m-label"
                         >|</label

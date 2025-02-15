@@ -78,7 +78,7 @@
             :title="$t('player.osdLyrics')"
             :class="{ active: show }"
             @click="show = !show"
-            ><svg-icon icon-class="osd-lyrics"
+            ><svg-icon icon-class="lyric"
           /></button-icon>
         </div>
         <div class="blank"></div>

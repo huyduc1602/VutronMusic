@@ -102,6 +102,9 @@ const isCurrentRoute = (path: string): boolean => {
         width: 100%;
         align-self: center;
         color: white;
+        padding-left: 14px;
+        padding-top: 10px;
+        padding-bottom: 10px;
       }
       .svg-icon {
         width: 100px;
