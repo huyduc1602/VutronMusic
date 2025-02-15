@@ -83,49 +83,78 @@ const close = () => {
 }
 
 const createAPlaylist = async () => {
-  if (isLocal.value) {
-    let imgID = 0
-    if (ids.value.length) imgID = ids.value[ids.value.length - 1]
-    const params = {
-      name: title.value,
-      trackIds: ids.value,
-      trackCount: ids.value.length,
-      coverImgUrl:
-        imgID === 0
-          ? 'https://p1.music.126.net/jWE3OEZUlwdz0ARvyQ9wWw==/109951165474121408.jpg?param=512y512'
-          : `atom://get-playlist-pic/${imgID}`
-    }
-    const playlist = await createLocalPlaylist(params)
-    if (playlist) {
-      close()
-      showToast(t('toast.createLocalPlaylistSuccess'))
-    } else {
-      showToast(t('toast.createLocalPlaylistFailed'))
-    }
-  } else {
-    const params: { [key: string]: any } = { name: title.value }
-    if (isPrivate.value) params.privacy = 10
-    createPlaylist(params).then((res) => {
-      if (res.code === 200) {
-        if (ids.value.length) {
-          const trackIDs = ids.value.join(',')
-          addOrRemoveTrackFromPlaylist({
-            op: 'add',
-            pid: res.id,
-            tracks: trackIDs
-          }).then((data) => {
-            if (data.body.code === 200) {
-              showToast(t('toast.savedToPlaylist'))
-            } else {
-              showToast(data.body.message)
-            }
-          })
-        }
-        close()
-        showToast(t('toast.createPlaylistSuccess'))
-        fetchLikedPlaylist()
+  // Validate title
+  if (!title.value.trim()) {
+    showToast(t('toast.playlistNameRequired'))
+    return
+  }
+
+  try {
+    if (isLocal.value) {
+      // Handle local playlist creation
+      const imgID = ids.value.length ? ids.value[ids.value.length - 1] : 0
+
+      const params = {
+        name: title.value.trim(),
+        trackIds: ids.value,
+        trackCount: ids.value.length,
+        coverImgUrl:
+          imgID === 0
+            ? 'https://p1.music.126.net/jWE3OEZUlwdz0ARvyQ9wWw==/109951165474121408.jpg?param=512y512'
+            : `atom://get-playlist-pic/${imgID}`
       }
+
+      const playlist = await createLocalPlaylist(params)
+      if (!playlist) {
+        throw new Error(t('toast.createLocalPlaylistFailed'))
+      }
+
+      showToast(t('toast.createLocalPlaylistSuccess'))
+      close()
+    } else {
+      // Handle online playlist creation
+      const params = {
+        name: title.value.trim(),
+        ...(isPrivate.value && { privacy: 10 })
+      }
+
+      const res = await createPlaylist(params)
+      if (res.code !== 200) {
+        throw new Error(res.message || t('toast.createPlaylistError'))
+      }
+
+      // Add tracks to playlist if needed
+      if (ids.value.length > 0) {
+        await addTracksToPlaylist(res.id)
+      }
+
+      await fetchLikedPlaylist()
+      showToast(t('toast.createPlaylistSuccess'))
+      close()
+    }
+  } catch (error) {
+    console.error('Create playlist error:', error)
+    showToast(error instanceof Error ? error.message : t('toast.createPlaylistError'))
+  }
+}
+
+// Helper function to add tracks to playlist
+const addTracksToPlaylist = async (playlistId: number) => {
+  try {
+    const data = await addOrRemoveTrackFromPlaylist({
+      op: 'add',
+      pid: playlistId,
+      tracks: ids.value.join(',')
     })
+
+    if (data.body.code !== 200) {
+      throw new Error(data.body.message || t('toast.addTracksError'))
+    }
+
+    showToast(t('toast.savedToPlaylist'))
+  } catch (error) {
+    console.error('Failed to add tracks:', error)
+    throw new Error(t('toast.addTracksError'))
   }
 }
 </script>

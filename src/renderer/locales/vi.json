@@ -380,6 +380,26 @@
       "minimize": "Hiện/Ẩn Trình Phát"
     }
   },
+  "toast": {
+    "createLocalPlaylistSuccess": "Đã tạo danh sách phát ngoại tuyến",
+    "createLocalPlaylistFailed": "Không thể tạo danh sách phát ngoại tuyến",
+    "savedToPlaylist": "Đã thêm vào danh sách phát",
+    "tracksAlreadyInPlaylist": "Bài hát đã có trong danh sách phát",
+    "needToLogin": "Yêu cầu đăng nhập tài khoản NetEase",
+    "getColorFailed": "Không thể lấy màu",
+    "scanning": "Đang quét nhạc trong máy...",
+    "addFailed": "Thất bại: Album không khả dụng hoặc bị hạn chế",
+    "removedFromPlaylist": "Đã xóa khỏi danh sách phát",
+    "deleteSuccess": "Đã xóa thành công",
+    "deleteFailed": "Xóa thất bại",
+    "copySuccess": "Đã sao chép thành công",
+    "playlistNameRequired": "Tên playlist không được để trống",
+    "createPlaylistError": "Tạo playlist thất bại",
+    "addTracksError": "Thêm bài hát vào playlist thất bại",
+    "createPlaylistSuccess": "Tạo playlist thành công",
+    "requestTimeout": "Yêu cầu quá thời gian chờ. Vui lòng thử lại.",
+    "serverError": "Lỗi kết nối máy chủ. Vui lòng thử lại sau."
+  },
   "general": {
     "language": {
       "vi": "Tiếng Việt",
@@ -432,5 +452,10 @@
     "sure": "Có",
     "choose": "Chọn",
     "choose-again": "Chọn lại"
+  },
+  "errors": {
+    "timeout": "Không thể kết nối đến máy chủ, vui lòng thử lại sau",
+    "sessionExpired": "Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại",
+    "serverError": "Lỗi kết nối máy chủ"
   }
 }

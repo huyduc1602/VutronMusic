@@ -19,7 +19,7 @@
           >{{ playlist?.name }}</div
         >
         <div v-if="isLocal" class="artist">
-          离线歌单 {{ user.nickname ? `by ${user.nickname}` : `` }}
+          Danh sách phát ngoại tuyến {{ user.nickname ? `by ${user.nickname}` : `` }}
         </div>
         <div v-else class="artist">
           歌单 by
@@ -196,91 +196,91 @@ import {
 
 const specialPlaylist = {
   2829816518: {
-    name: '欧美私人订制',
+    name: 'Âm nhạc Âu Mỹ tùy chỉnh',
     gradient: 'gradient-pink-purple-blue'
   },
   2890490211: {
-    name: '助眠鸟鸣声',
+    name: 'Tiếng chim hót ru ngủ',
     gradient: 'gradient-green'
   },
   5089855855: {
-    name: '夜的胡思乱想',
+    name: 'Suy tư về đêm',
     gradient: 'gradient-moonstone-blue'
   },
   2888212971: {
-    name: '全球百大DJ',
+    name: 'Top 100 DJ toàn cầu',
     gradient: 'gradient-orange-red'
   },
   2829733864: {
-    name: '睡眠伴侣',
+    name: 'Bạn đồng hành giấc ngủ',
     gradient: 'gradient-midnight-blue'
   },
   2829844572: {
-    name: '洗澡时听的歌',
+    name: 'Nhạc khi tắm',
     gradient: 'gradient-yellow'
   },
   2920647537: {
-    name: '还是会想你',
+    name: 'Vẫn nhớ về em',
     gradient: 'gradient-dark-blue-midnight-blue'
   },
   2890501416: {
-    name: '助眠白噪声',
+    name: 'Tiếng ồn trắng giúp ngủ',
     gradient: 'gradient-sky-blue'
   },
   5217150082: {
-    name: '摇滚唱片行',
+    name: 'Cửa hàng nhạc Rock',
     gradient: 'gradient-yellow-red'
   },
   2829961453: {
-    name: '古风音乐大赏',
+    name: 'Nhạc cổ phong tuyển chọn',
     gradient: 'gradient-fog'
   },
   4923261701: {
-    name: 'Trance',
+    name: 'Nhạc Trance',
     gradient: 'gradient-light-red-light-blue '
   },
   5212729721: {
-    name: '欧美点唱机',
+    name: 'Máy hát nhạc Âu Mỹ',
     gradient: 'gradient-indigo-pink-yellow'
   },
   3103434282: {
-    name: '甜蜜少女心',
+    name: 'Nhạc ngọt ngào cho nữ',
     gradient: 'gradient-pink'
   },
   2829896389: {
-    name: '日系私人订制',
+    name: 'Nhạc Nhật tùy chỉnh',
     gradient: 'gradient-yellow-pink'
   },
   2829779628: {
-    name: '运动随身听',
+    name: 'Nhạc tập thể dục',
     gradient: 'gradient-orange-red'
   },
   2860654884: {
-    name: '独立女声精选',
+    name: 'Giọng nữ độc lập tuyển chọn',
     gradient: 'gradient-sharp-blue'
   },
   898150: {
-    name: '浪漫婚礼专用',
+    name: 'Nhạc đám cưới lãng mạn',
     gradient: 'gradient-pink'
   },
   2638104052: {
-    name: '牛奶泡泡浴',
+    name: 'Tắm bọt sữa',
     gradient: 'gradient-fog'
   },
   5317236517: {
-    name: '后朋克精选',
+    name: 'Post-punk tuyển chọn',
     gradient: 'gradient-pink-purple-blue'
   },
   2821115454: {
-    name: '一周原创发现',
+    name: 'Khám phá nhạc gốc tuần',
     gradient: 'gradient-blue-purple'
   },
   2829883282: {
-    name: '华语私人雷达',
+    name: 'Radar nhạc Hoa ngữ',
     gradient: 'gradient-yellow-red'
   },
   3136952023: {
-    name: '私人雷达',
+    name: 'Radar cá nhân',
     gradient: 'gradient-radar'
   }
 }
@@ -400,7 +400,9 @@ const likePlaylist = (toast = false) => {
       if (data.code === 200) {
         playlist.value.subscribed = !playlist.value.subscribed
         if (toast) {
-          showToast(playlist.value.subscribed ? '已保存到音乐库' : '已从音乐库删除')
+          showToast(
+            playlist.value.subscribed ? 'Đã lưu vào thư viện nhạc' : 'Đã xóa khỏi thư viện nhạc'
+          )
         }
       }
       getPlaylistDetail(playlist.value.id, true).then((data: any) => {
@@ -445,7 +447,7 @@ const deleteAPlaylist = () => {
     return
   }
 
-  if (confirm(`确定要删除歌单 ${playlist.value.name}？`)) {
+  if (confirm(`Bạn có chắc chắn muốn xóa danh sách phát ${playlist.value.name} không？`)) {
     if (isLocal.value) {
       deleteLocalPlaylist(playlist.value.id).then((result) => {
         if (result) {

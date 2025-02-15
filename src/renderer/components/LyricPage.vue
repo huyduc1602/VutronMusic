@@ -118,11 +118,11 @@ const lyricWithTranslation = computed(() => {
 const offset = computed(() => {
   const lrcOffset = currentTrack.value!.offset || 0
   if (lrcOffset === 0) {
-    return '未调整'
+    return 'Chưa điều chỉnh'
   } else if (lrcOffset > 0) {
-    return `提前${lrcOffset}s`
+    return `trước${lrcOffset}s`
   } else {
-    return `延后${Math.abs(lrcOffset)}s`
+    return `hoãn${Math.abs(lrcOffset)}s`
   }
 })
 
@@ -148,7 +148,7 @@ const setOffset = (offset: number) => {
     currentTrack.value!.offset += offset
   }
   showToast(
-    `Độ trễ lời bài hát của bài hát hiện tại là: ${currentTrack.value!.offset > 0 ? 'trì hoãn' : 'trước'}${Math.abs(currentTrack.value!.offset)}s`
+    `Độ trễ lời bài hát của bài hát hiện tại là: ${currentTrack.value!.offset > 0 ? 'trì hoãn ' : 'trước '}${Math.abs(currentTrack.value!.offset)}s`
   )
 }
 
