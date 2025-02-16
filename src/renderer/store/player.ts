@@ -60,7 +60,7 @@ export const usePlayerStore = defineStore(
     const isLocalList = ref(false)
     const pic = ref<string>(
       currentTrack.value?.album?.picUrl ||
-      'https://p2.music.126.net/UeTuwE7pvjBpypWLudqukA==/3132508627578625.jpg'
+        'https://p2.music.126.net/UeTuwE7pvjBpypWLudqukA==/3132508627578625.jpg'
     )
     const playlistSource = ref<{
       type: string

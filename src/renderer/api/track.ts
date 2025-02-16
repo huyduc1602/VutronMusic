@@ -81,7 +81,7 @@ export function topSong(type: number) {
 /**
  * 新碟上架
  * 说明 : 调用此接口 , 可获取新碟上架
- * @param {string} params.area - ALL: 全部,ZH: 华语,EA: 欧美, KR: 韩国, JP: 日本
+ * @param {string} params.area - ALL: 全部,ZH: 华语,EA: 欧美, KR: 韩国, JP: 日本, VI: Vietnam
  * @param {string=} params.type - new: 全部，hot：热门，默认为new
  * @param {number=} params.year - 年，默认本年
  * @param {number=} params.month -月，默认本月

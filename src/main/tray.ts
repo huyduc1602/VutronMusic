@@ -31,7 +31,12 @@ const createMenuTemplate = (win: BrowserWindow) => {
   const lang = store.get('settings.lang') as string
   // 定义多语言文本映射
   const i18n = {
-    showMainPanel: { zh: '显示主面板', zht: '顯示主面板', en: 'Show Main Panel', vi: 'Hiển thị cửa sổ chính' },
+    showMainPanel: {
+      zh: '显示主面板',
+      zht: '顯示主面板',
+      en: 'Show Main Panel',
+      vi: 'Hiển thị cửa sổ chính'
+    },
     openOSD: { zh: '开启歌词', zht: '開啟歌詞', en: 'Open Lyric', vi: 'Hiện lời bài hát' },
     closeOSD: { zh: '关闭歌词', zht: '關閉歌詞', en: 'Close Lyric', vi: 'Ẩn lời bài hát' },
     lockOSD: { zh: '锁定歌词', zht: '鎖定歌詞', en: 'Lock Lyric', vi: 'Khóa lời bài hát' },
@@ -56,12 +61,12 @@ const createMenuTemplate = (win: BrowserWindow) => {
 
   const template: MenuItemConstructorOptions[] = Constants.IS_LINUX
     ? [
-      {
-        label: t('showMainPanel'),
-        click: () => win.show()
-      },
-      { type: 'separator' }
-    ]
+        {
+          label: t('showMainPanel'),
+          click: () => win.show()
+        },
+        { type: 'separator' }
+      ]
     : []
 
   return template.concat([

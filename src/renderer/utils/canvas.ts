@@ -73,7 +73,8 @@ export class Lyric extends Canvas {
     // this.timerId = null
     this.timer = null
     this.frame = 34 // 歌词滚动的帧率
-    this.ctx.font = `${this.fontSize * this.devicePixelRatio
+    this.ctx.font = `${
+      this.fontSize * this.devicePixelRatio
     }px "pingfang sc", "microsoft yahei", sans-serif`
     this.ctx.textBaseline = 'middle'
   }

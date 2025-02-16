@@ -7,16 +7,16 @@ const baseUrl = '/netease'
 const service: AxiosInstance = axios.create({
   baseURL: baseUrl,
   withCredentials: true,
-  timeout: 30000, // 30 giây timeout
+  timeout: 30000 // 30 giây timeout
 })
 
 // Cấu hình thử lại request
-const MAX_RETRIES = 3;
-const RETRY_DELAY = 1000; // 1 giây delay giữa các lần thử lại
+const MAX_RETRIES = 3
+const RETRY_DELAY = 1000 // 1 giây delay giữa các lần thử lại
 
 // Interceptor xử lý request
 service.interceptors.request.use(
-  config => config,
+  (config) => config,
   async (err) => {
     const config = err.config as AxiosRequestConfig & { retryCount?: number }
 
@@ -29,7 +29,7 @@ service.interceptors.request.use(
     config.retryCount = (config.retryCount || 0) + 1
 
     // Chờ trước khi thử lại
-    await new Promise(resolve => setTimeout(resolve, RETRY_DELAY))
+    await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY))
 
     // Thực hiện lại request
     return service(config)
