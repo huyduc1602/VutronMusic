@@ -143,7 +143,7 @@ export const createMD5 = (filePath: string) => {
 }
 
 export const splitArtist = (artist: string | undefined) => {
-  if (!artist) return ['未知歌手']
+  if (!artist) return ['Ca sĩ vô danh']
   let result: string[]
   if (artist.includes('&')) {
     result = artist.split('&')

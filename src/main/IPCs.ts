@@ -198,7 +198,7 @@ function initOSDWindowIpcMain(win: BrowserWindow, lrc: { [key: string]: Function
   })
 }
 
-function initTaskbarIpcMain(): void {}
+function initTaskbarIpcMain(): void { }
 
 function initOtherIpcMain(win: BrowserWindow): void {
   // Get application version
@@ -337,7 +337,7 @@ function initOtherIpcMain(win: BrowserWindow): void {
             // 获取音乐信息
             const track = {
               id: songs.length + newTracks.length + 1,
-              name: common.title ?? '错误文件',
+              name: common.title ?? 'Tập tin lỗi',
               dt: (format.duration ?? 0) * 1000,
               filePath,
               show: true,
